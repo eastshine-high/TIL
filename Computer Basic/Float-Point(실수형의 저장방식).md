@@ -1,3 +1,5 @@
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
 # Float-Point(실수형의 저장방식)
 
 실수형은 값을 부동소수점수(Float-Point)의 형태로 저장한다. 부동소수점수는 실수를 $\pm M \times 10^E$와 같은 형태로 표현하는 것을 말하며, 부동소수점수는 부호(Sign), 지수(Exponent), 가수(Mantissa), 모두 세부분으로 이루어져 있다.
@@ -41,3 +43,19 @@ $`\pm M \times 10^E`$
 ### Reference
 
 Java의 정석, 도우출판, 남궁성
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+inlineMath: [['$','$'], ['\\(','\\)']],
+processEscapes: true},
+jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+TeX: {
+extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+equationNumbers: {
+autoNumber: "AMS"
+}
+}
+});
+</script>
