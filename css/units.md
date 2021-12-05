@@ -22,8 +22,7 @@ CSS 단위는 크게 절대적 단위(Absoluete length units)와 상대적 단�
 <table class="ws-table-all notranslate">
   <tr>
     <th style="width:12%">Unit</th>
-    <th>Description</th>
-    <th></th>
+    <th>Description</th>    
   </tr>
   <tr>
     <td>em</td>
