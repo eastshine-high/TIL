@@ -5,12 +5,13 @@ Wikipedia에서는 다음과 같이 HTML을 정의한다.
 > The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser.
 > 
 
-> **HyperText Markup Language은 웹 브라우저에 보여지도록 설계된 문서의 표준화된 Markup 언어이다.** 이 언어는 CSS(Cascading Style Sheets) 및 JavaScript와 같은 스크립팅 언어와 같은 기술의 도움을 받을 수 있다.
+> **HyperText Markup Language은 웹 브라우저에 보여지도록 설계된 문서의 표준화된 Markup 언어이다.** 
 > 
 
 - 웹 브라우저는 웹 서버 또는 로컬 저장소에서 HTML 문서들을 수신하고 이 문서들을 멀티미디어 웹 페이지로 렌더링한다. HTML은 웹 페이지의 구조를 의미론적으로 설명하고 문서의 모양에 대한 단서를 포함한다.
 - **Hypertext란 다른 텍스트로 참조(링크)되어있는 텍스트를 말한다.** 사용자는 이 참조(링크)를 통해 해당 텍스트(링크)로 즉시 접근할 수 있다. 즉 웹 사이트에서 링크를 클릭해 다른 문서나 사이트로 즉시 이동할 수 있는 기능을 말한다.
 - **Markup Language란 일반적인 텍스트와 문법적으로 구분하기 위해서 문서에 어노테이팅 된 것을 말한다.** 즉 태그(tag)를 사용해 문서에서 어느 부분이 제목이고 본문인지, 어느 부분이 사진이고 링크인지 표시하여 문서를 구조화하는 것을 말한다.
+- 이 언어는 CSS(Cascading Style Sheets) 및 JavaScript와 같은 스크립팅 언어와 같은 기술의 도움을 받을 수 있다.
 
 최종적으로 웹에서 자유롭게 오갈 수 있는 웹 문서를 만드는 언어가 HTML이라고 정리할 수 있다.
 
