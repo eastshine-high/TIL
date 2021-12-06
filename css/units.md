@@ -67,17 +67,18 @@ CSS 단위는 크게 절대적 단위(Absoluete length units)와 상대적 단�
 ## 이 단위는 어디에 사용하면 좋을까?
 
 - 부모 엘러먼트 크기(size)에 상대적 단위 : %, em
+    - em과 rem은 폰트 사이즈에 비례해서 변하기 때문에 결국 이 단위는 고정적인 값(pixel로 변환되기 때문)을 가진다. 그래서 컨텐츠를 좀 더 물과 같이 유동적으로 만들기 위해서는 %를 사용하는 것이 더 좋다.
 - 브라우져에 상대적인 단위 : v*, rem
-- 엘러먼트의 너비 혹은 높이에 따른 단위 : %, v*
+- 엘러먼트의 너비 혹은 높이에 따른 단위 : %, v* (혹은 flex 이용)
 - 폰트 사이즈에 따른 단위 : em, rem
     - 사용하는 컴포넌트가 부모 요소에 따라서 달라져야 한다면 : em
     - 사용하는 컴포넌트가 어느 위치에 상관없이 동일해야 한다면 : rem
     - 폰트 사이즈에서는 rem 사용을 권장. em은 엘러먼트의 계층에 따라서 폰트 사이즈가 유동적이기 때문에 폰트 사이즈를 계산하기가 복잡하다.
+    - em과 rem 둘 중에 한 가지만 골라서 사용하기 보다는 내가 어떤 컴포넌트를 어떻게 사용하느냐에 따라서 적절히 필요한 것을 사용하는 것이 중요하다.
 
 <br>
 
 ## 상대적 크기 계산하기
-
 - 결국 브라우저에서는 px로 변환되어 스크린에 보여준다.
 - 브라우저 지정 HTML의 기본 Font Size : 16px  → 1em = 16px
 - HTML 엘러먼트의 기본 %는 100%
@@ -85,6 +86,8 @@ CSS 단위는 크게 절대적 단위(Absoluete length units)와 상대적 단�
 <br>
 
 ### em(relative to parent element)
+
+<br>
 
 부모 요소에서 지정한 폰트의 대문자 M의 너비를 1em으로 지정한 것
 
@@ -96,7 +99,7 @@ CSS 단위는 크게 절대적 단위(Absoluete length units)와 상대적 단�
 
 ```html
 .parent{
-    font-size: 8em;  → 16px(HTML) ✖️ 8em = 128px
+    font-size: 8em;  // 16px(HTML) ✖️ 8em = 128px
     (8em은 800%와 같은 의미)
 }
 ```
@@ -110,7 +113,7 @@ CSS 단위는 크게 절대적 단위(Absoluete length units)와 상대적 단�
 
 <br>
 
-### rem(relative to root element)ㅊㄴ
+### rem(relative to root element)
 
 root인 HTML의 기본 font size인 16px에 상대적인 값
 
@@ -140,10 +143,12 @@ root인 HTML의 기본 font size인 16px에 상대적인 값
 
 <br>
 
+### Cf. Pixel에서 em 혹은 rem을 계산하기가 어렵다면 : [http://pxtoem.com](http://pxtoem.com/)
+
+<br>
+
 ---
 
 ### Reference
 
 드림코딩 : [https://www.youtube.com/watch?v=7Z3t1OWOpHo&list=PLv2d7VI9OotQ1F92Jp9Ce7ovHEsuRQB3Y&index=21](https://www.youtube.com/watch?v=7Z3t1OWOpHo&list=PLv2d7VI9OotQ1F92Jp9Ce7ovHEsuRQB3Y&index=21)
-
-W3Schools : https://www.w3schools.com/cssref/css_units.asp
