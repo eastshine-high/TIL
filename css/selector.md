@@ -32,7 +32,8 @@ p.test {
 
 - 전체 선택자(universal selector) : 전체 선택자는 "`*`"로 표시하며 모든 엘리먼트를 포함합니다.
 - 타입 선택자(type selector) : 엘리먼트(`body`, `p`, `h1`, `ol`, `li` 등)를 선택자로 하는것을 말합니다.
-- 하위 선택자(descendant selector) : 하위 선택자는 공백으로 분리된 두개 이상의 선택자들로 만들어집니다.(ex, depth에 상관없이 body안의 p태그는 모두 선택됩니다.)
+- 하위 선택자(descendant selector) : 하위 선택자는 공백` `으로 분리된 두개 이상의 선택자들로 만들어집니다.(ex, depth에 상관없이 body안의 p태그는 모두 선택됩니다.)
+(ex, `body p {color: red;}` depth에 상관없이 body안의 p태그는 모두 선택됩니다.)
 - 자식 선택자(child selector) : 자식 선택자는 "`>`"로 분리된 두개 이상의 선택자들로 만들어집니다.(1depth아래의 자식들만 선택됩니다.)
 - 인접 형제 선택자(adjacent sibling selector) : 인접 선택자는 "`+`"로 분리된 두개 이상의 선택자들로 만들어집니다.(div와 같은 depth이면서 div 바로 다음에 나오는 p가 선택됩니다.)
 
