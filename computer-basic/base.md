@@ -87,7 +87,7 @@ age `25` → age `11001`
 
 0.101(2)는 다음과 같이 표현할 수 있다. 
 
-= <!-- $1 * 2^{-1} + 0 * 2^{-2} + 1 * 2^{3}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=1%20*%202%5E%7B-1%7D%20%2B%200%20*%202%5E%7B-2%7D%20%2B%201%20*%202%5E%7B3%7D">
+= <!-- $1 * 2^{-1} + 0 * 2^{-2} + 1 * 2^{-3}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=1%20*%202%5E%7B-1%7D%20%2B%200%20*%202%5E%7B-2%7D%20%2B%201%20*%202%5E%7B3%7D">
 
 = 1 * 0.5 + 0 * 0.25 + 1 * 0.125
 
