@@ -1,7 +1,3 @@
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
-
-
 # Base(진법)
 
 ### 10진법과 2진법
@@ -104,6 +100,9 @@ age `25` → age `11001`
 ### Reference
 
 Java의 정석, 도우출판, 남궁성
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
