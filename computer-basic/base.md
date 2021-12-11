@@ -12,7 +12,7 @@ age `25` → age `11001`
 
 ### 비트(bit), 바이트(byte), 워드(word)
 
-- 비트(bit) : 한 자리의 2진수를 '비트(bit, binary digit)'라고 하며, 1 비트는 컴퓨터가 값을 저장할 수 있는 최소 단위이다. $n$비트로 $2^n$개의 값을 표현할 수 있다. 그리고 $n$비트로 10진수를 표현한다면, 표현 가능한 10진수의 범위는 0 ~$2^n-1$이 된다.
+- 비트(bit) : 한 자리의 2진수를 '비트(bit, binary digit)'라고 하며, 1 비트는 컴퓨터가 값을 저장할 수 있는 최소 단위이다. n비트로 <!-- $2^n$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5En">개의 값을 표현할 수 있다. 그리고 n비트로 10진수를 표현한다면, 표현 가능한 10진수의 범위는 0 ~ <!-- $2^n-1$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5En-1">이 된다.
 - 바이트(byte) : 1 비트는 너무 작은 값이기 때문에 1 비트 8개를 묶어서 '바이트(byte)'라는 단위로 정의해서 데이터의 기본 단위로 사용한다.
 - 워드(word) : 이 외에도 '워드(word)'라는 단위가 있는데, 워드(word)는 'CPU가 한 번에 처리할 수 있는 데이터의 크기'를 의미한다. 워드의 크기는 CPU의 성능에 따라 달라진다. 예를 들어 32 비트 CPU에서 1 워드는 32 비트(4 바이트)이고, 64비트 CPU에서는 64 비트(8 바이트)이다.
 
@@ -28,7 +28,7 @@ age `25` → age `11001`
 
 ### 2진수를 8진수, 16진수로 변환
 
-2진수를 **8진수를 변환하려면, 2진수를 뒤에서부터 3자리씩 끊어서** 그에 해당하는 8진수로 바꾸면 된다. 8은 $2^3$이기 때문에, 8진수 한 자리가 2진수 3자리를 대신할 수 있는 것이다. 2진수를 16진수로 변환하는 방법 역시 이와 비슷한데, 3자리가 아닌 4자리씩 끊어서 바꾼다는 점만 다르다.
+2진수를 **8진수를 변환하려면, 2진수를 뒤에서부터 3자리씩 끊어서** 그에 해당하는 8진수로 바꾸면 된다. 8은 <!-- $2^3$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5E3">이기 때문에, 8진수 한 자리가 2진수 3자리를 대신할 수 있는 것이다. 2진수를 16진수로 변환하는 방법 역시 이와 비슷한데, 3자리가 아닌 4자리씩 끊어서 바꾼다는 점만 다르다.
 
 (2)`1010101100` = (8)`1254` = (16)`2AC`
 
@@ -60,7 +60,7 @@ age `25` → age `11001`
 
 어떤 진법으로 된 수라도 10진수로 변환하는 방법은 똑같다. 각 자리수의 수에 해당 단위의 값을 곱해서 모두 더하면 된다.
 
-1460(8) = $1*8^3 + 4*8^2 + 6*8^1 + 0*8^0$
+1460(8) = <!-- $1*8^3 + 4*8^2 + 6*8^1 + 0*8^0$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=1*8%5E3%20%2B%204*8%5E2%20%2B%206*8%5E1%20%2B%200*8%5E0">
 
 <br>
 
@@ -87,7 +87,7 @@ age `25` → age `11001`
 
 0.101(2)는 다음과 같이 표현할 수 있다. 
 
-= $1 * 2^{-1} + 0 * 2^{-2} + 1 * 2^{3}$
+= <!-- $1 * 2^{-1} + 0 * 2^{-2} + 1 * 2^{3}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=1%20*%202%5E%7B-1%7D%20%2B%200%20*%202%5E%7B-2%7D%20%2B%201%20*%202%5E%7B3%7D">
 
 = 1 * 0.5 + 0 * 0.25 + 1 * 0.125
 
@@ -100,22 +100,3 @@ age `25` → age `11001`
 ### Reference
 
 Java의 정석, 도우출판, 남궁성
-
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-tex2jax: {
-inlineMath: [['$','$'], ['\\(','\\)']],
-processEscapes: true},
-jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
-extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
-TeX: {
-extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
-equationNumbers: {
-autoNumber: "AMS"
-}
-}
-});
-</script>
