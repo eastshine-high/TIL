@@ -155,7 +155,17 @@ True
 | max(s) | largest item of s |
 | s.index(x[, i[, j]]) | index of the first occurrence of x in s (at or after index i and before index j) |
 | s.count(x) | total number of occurrences of x in s |
-
+```bash
+>>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+>>> fruits.count('apple')
+2
+>>> fruits.count('tangerine')
+0
+>>> fruits.index('banana')
+3
+>>> fruits.index('banana', 4)  # Find next banana starting a position 4
+6
+```
 <br>
 
 ---
