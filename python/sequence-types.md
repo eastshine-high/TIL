@@ -1,4 +1,4 @@
-# 시퀀스 자료형(Sequence Data type)
+# 시퀀스 자료형(Sequence Types)
 
 - 시퀀스 자료형은 여러 객체를 저장하는 자료형이며, 각 객체는 순서를 가진다.
 - 각 요소는 인덱스(index)를 사용하여 참조할 수 있다.
@@ -21,7 +21,7 @@
 
 ## 시퀀스 자료형이 가지는 공통적인 연산
 
-시퀀스 자료형이 가지는 공통적인 연산으로는 인덱싱(Indexing), 슬라이싱(Slicing), 연결하기(Concatenation), 반복하기(Repetition), 멤버 검사, 길이 정보가 있다.
+시퀀스 자료형이 가지는 공통적인 연산으로는 인덱싱(Indexing), 슬라이싱(Slicing), 연결하기(Concatenation), 반복하기(Repetition), 멤버 검사, 길이 정보 등이 있다.
 
 <br>
 
@@ -139,8 +139,28 @@ True
 
 <br>
 
+### Common Sequence Operations
+
+| Operation | Result |
+| --- | --- |
+| x in s | True if an item of s is equal to x, else False |
+| x not in s | False if an item of s is equal to x, else True |
+| s + t | the concatenation of s and t |
+| s * n or n * s | equivalent to adding s to itself n times |
+| s[i] | ith item of s, origin 0 |
+| s[i:j] | slice of s from i to j |
+| s[i:j:k] | slice of s from i to j with step k |
+| len(s) | length of s |
+| min(s) | smallest item of s |
+| max(s) | largest item of s |
+| s.index(x[, i[, j]]) | index of the first occurrence of x in s (at or after index i and before index j) |
+| s.count(x) | total number of occurrences of x in s |
+
+<br>
+
 ---
 
 ### Reference
+https://docs.python.org/3.9/library/stdtypes.html#sequence-types-list-tuple-range
 
 <파이썬3 바이블, 이강성, 프리렉>
