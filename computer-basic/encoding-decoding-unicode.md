@@ -28,7 +28,7 @@
 
 ### 아스키(ASCII)
 
-ASCII는 'Amerian Standard Code for Information Interchange'의 약어로 정보교환을 위한 미국 표준 코드란 뜻이다. 아스키는 128개(=$2^7$)의 문자 집합(character set)을 제공하는 7 bit부호로, 처음 32개의 문자는 인쇄와 전송 제어용으로 사용되는 제어문자(control character)로 출력할 수 없고 마지막 문자(DEL)을 제외한 33번째 이후의 문자들은 출력할 수 있는 문자들로, 기호와 숫자, 영대소문자로 이루어져 있다.
+ASCII는 'Amerian Standard Code for Information Interchange'의 약어로 정보교환을 위한 미국 표준 코드란 뜻이다. 아스키는 128개(=<!-- $2^7$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5E7">)의 문자 집합(character set)을 제공하는 7 bit부호로, 처음 32개의 문자는 인쇄와 전송 제어용으로 사용되는 제어문자(control character)로 출력할 수 없고 마지막 문자(DEL)을 제외한 33번째 이후의 문자들은 출력할 수 있는 문자들로, 기호와 숫자, 영대소문자로 이루어져 있다.
 
 아스키는 숫자 '0~9', 영문자'A~Z'와 'a~z'가 연속적으로 배치되어 있다는 특징이 있으며, 이러한 특징은 프로그래밍에서 유용하게 활용된다.
 
@@ -38,7 +38,7 @@ ASCII는 'Amerian Standard Code for Information Interchange'의 약어로 정보
 
 예전엔 같은 지역 내에서만 문서교환이 주를 이뤗지만, 인터넷이 발명되면서 서로 다른 지역의 다른 언어를 사용하는 컴퓨터간의 문서교환이 활발해지기 시작하자 서로 다른 문자 인코딩을 사용하는 컴퓨터간의 문서교환에 어려움을 겪게 되었다. 이러한 어려움을 해소하고자 전 세계의 모든 문자를 하나의 통일된 문자집합으로 표현하고자 노력하였고 그 결과가 바로 유니코드다.
 
-유니코드는 처음엔 모든 문자를 2byte(=2^16 = 65536)로 표현하려했으나, 2 byte(=16bit)로도 부족해서 21bit(약 200만 문자)로 확장되었다. 새로 추가된 문자들을 보충 문자(supplementary character)라고 하는데 이 문자들을 표현하기 위해서는 char타입이 아닌 int타입을 사용해야 한다. 우리가 보충문자를 쓸 일은 거의 업기 때문에 참고로만 알아두면 된다.
+유니코드는 처음엔 모든 문자를 2byte(=<!-- $2^16$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5E16"> = 65536)로 표현하려했으나, 2 byte(=16bit)로도 부족해서 21bit(약 200만 문자)로 확장되었다. 새로 추가된 문자들을 보충 문자(supplementary character)라고 하는데 이 문자들을 표현하기 위해서는 char타입이 아닌 int타입을 사용해야 한다. 우리가 보충문자를 쓸 일은 거의 업기 때문에 참고로만 알아두면 된다.
 
 유니코드는 먼저 유니코드에 포함시키고자 하는 문자들의 집합을 정의하였는데, 이것을 유니코드 문자 셋(또는 캐릭터 셋, character set)이라고 한다. 그리고 이 문자 셋에 번호를 붙인 것이 유니코드 인코딩이다. 유니코드 인코딩에는 UTF-8, UTF-16, UTF-32 등 여러 가지 종류가 있는데, 자바에서는 UTF-16을 사용한다. URF-16은 모든 문자를 2byte의 고정크기로 표현하고 UTF-8은 하나의 문자를 1~4 byte의 가변크기로 표현한다. 그리고 두 인코딩 모두 처음 128문자가 아스키와 동일하다. 아스키를 그대로 포함하고 있는 것이다.
 
