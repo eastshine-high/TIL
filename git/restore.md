@@ -1,4 +1,4 @@
-## g**it restore**
+## **git restore**
 
 Git 버전 2.23에는 `git restore`라는 새로운 명령어가 `git reset`의 대안으로 도입되었다. Git 버전 2.23부터 Git은 많은 실행 취소 작업에 `git reset` 대신 `git restore`를 사용한다.
 
