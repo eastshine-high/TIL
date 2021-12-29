@@ -90,6 +90,8 @@ public static List<Apple> filterApple(List<Apple> inventory, ApplePredicate p){
 
 이제 필요한 대로 다양한 ApplePredicate를 만들어서 filterApples 메서드로 전달할 수 있다. **우리가 전달한 ApplePredicate 객체에 의해 filterApples 메서드의 동작이 결정된다. 즉, filterApples 메서드의 동작을 파라미터화한 것이다.**
 
+filterApple 메서드를 사용할 때, ApplePredicate 객체(코드 블록)를 여러 방법으로 전달할 수 있다. 첫 번째, 클래스를 선언하여 생성한 인스턴스를 전달할 수 있다. 두 번째, 익명클래스를 이용하여 클래스를 선언과 인스턴스화를 동시에 하여 객체를 전달할 수 있다. 세 번째, [람다](https://github.com/eastshine-high/til/blob/main/java/modern-java/lambda.md) 표현식을 사용하여 코드 블록(객체)를 전달할 수 있다.
+
 <br>
 
 ### Reference
