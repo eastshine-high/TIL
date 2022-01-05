@@ -1,6 +1,6 @@
 # 대괄호 [ ] 안에 문자 목록을 제공할 수 있다
 
-대괄호 "[]" 안에 문자 목록을 제공할 수 있다. 이 문자 중 하나라도 발견되면 표현식이 일치한다. 문자 순서는 중요하지 않다.(Case 3)
+대괄호 "[]" 안에 문자 목록을 제공할 수 있다. **이 문자 중 하나라도 발견되면 표현식이 일치한다. 문자 순서는 중요하지 않다.**(Case 3)
 
 Inside square brackets "[]" a list of characters can be provided. The expression matches if any of these characters is found. The order of characters is insignificant.(*Case 3*)
 

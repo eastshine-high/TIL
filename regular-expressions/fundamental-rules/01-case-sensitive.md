@@ -10,6 +10,8 @@ Regular expressions are case sensitive. Therefore *Case 1* will find the speci
 
 Hello, world!
 
+<br>
+
 ### Case 1
 
 Regular Expession : **Hello**
@@ -17,6 +19,8 @@ Regular Expession : **Hello**
 First match : `Hello`, world
 
 All matches : `Hello`, world
+
+<br>
 
 ### Case 2
 Regular Expession : **Hello**

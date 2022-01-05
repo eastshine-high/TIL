@@ -7,20 +7,25 @@ Some characters have special meanings. Character ^ matches the beginning of the 
 <br>
 
 ### Source
+
 who is who
 
 <br>
 
 ### Case 1
 Regular Expession : **^who**
+
 First match : `who` is who
+
 All matches : `who` is who
 
 <br>
 
 ### Case 2
 Regular Expession : **who$**
+
 First match : who is `who`
+
 All matches : who is `who`
 
 <br>

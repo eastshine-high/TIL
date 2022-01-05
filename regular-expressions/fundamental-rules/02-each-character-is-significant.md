@@ -10,6 +10,8 @@ Each character inside the search pattern is significant including whitespace cha
 
 Hello, world!
 
+<br>
+
 ### Case 1
 
 Regular Expession : **Hello, world**
@@ -17,6 +19,8 @@ Regular Expession : **Hello, world**
 First match : `Hello, world`
 
 All matches : `Hello, world`
+
+<br>
 
 ### Case 2
 

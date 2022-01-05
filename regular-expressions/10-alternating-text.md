@@ -2,6 +2,8 @@
 
 대체 텍스트는 괄호로 묶고 대체 텍스트는 |로 구분할 수 있다.
 
+Alternating text can be enclosed in parentheses and alternatives separated with |.
+
 <br>
 
 ### Source

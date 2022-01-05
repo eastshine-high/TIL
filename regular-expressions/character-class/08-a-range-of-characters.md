@@ -2,6 +2,8 @@
 
 [ - ] 구문을 사용하여 문자 범위를 지정할 수 있다. CASE 1과 CASE 2는 동일하다. 하나의 표현식에 여러 범위를 지정할 수 있다(Case 5).
 
+A range of characters can be specified with [ - ] syntax. Case 1 and Case 2 are equivalent. Several ranges can be given in one expression (Case 5).
+
 <br>
 
 ### Source
