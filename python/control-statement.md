@@ -59,6 +59,8 @@ else:
 
 파이썬 내장 함수 range는 정수 수열을 생성하는 객체를 만든다. range(stop)처럼 인수 하나를 넘겨줄 때 수열은 0부터 시작해서 stop바로 전 정수까지이다.
 
+ref : https://docs.python.org/3/library/stdtypes.html#range
+
 ```python
 >>>range(10)
 range(0, 10)
