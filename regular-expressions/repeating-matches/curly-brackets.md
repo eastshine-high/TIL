@@ -2,7 +2,10 @@
 
 **중괄호를 사용하면 문자 반복을 정확하게 지정할 수 있습니다.** {m}은 정확히 m번 일치하고(Case 1), {m,n}은 최소 m번, 최대 n번 일치하고(Case 2) {m,}는 최소 m번 일치를 지정합니다(Case 3).
 
-Curly brackets enable precise specification of character repetitions. {m} matches precisely m times (Case 1), {m,n} matches minimaly m times and maximaly n times (Case 2) and {m,}matches minimaly m times(Case 3).
+Curly brackets enable precise specification of character repetitions. 
+* `{m}` matches precisely m times (Case 1)
+* `{m,n}` matches minimaly m times and maximaly n times (Case 2)
+* `{m,}` matches minimaly m times(Case 3).
 
 <br>
 

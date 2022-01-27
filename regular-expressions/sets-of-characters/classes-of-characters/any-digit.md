@@ -1,8 +1,8 @@
 # \d는 모든 숫자와 일치합니다
 
-`\d`는 모든 숫자와 일치하고 `\D`는 다른 모든 것과 일치합니다. Case 1과 Case 2를 비교하십시오. 프로그래밍 언어가 이 약어를 지원하지 않는 경우 "[0-9]"를 사용하십시오(Case 3).
+`\d`는 모든 숫자와 일치하고 `\D`는 다른 모든 것과 일치합니다. Case 1과 Case 2를 비교하십시오. 프로그래밍 언어가 이 약어를 지원하지 않는 경우 `[0-9]`를 사용하십시오(Case 3).
 
-`\d` matches any digit and `\D` anything else. Compare *Case 1* and *Case 2*. Use "[0-9]" if your programming language does not support this abbreviation (*Case 3*).
+`\d` matches any digit and `\D` anything else. Compare *Case 1* and *Case 2*. Use `[0-9]` if your programming language does not support this abbreviation (*Case 3*).
 
 <br>
 

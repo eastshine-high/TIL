@@ -1,6 +1,6 @@
 # \s는 공백 문자(공백, 개행 및 탭)와 일치합니다
 
-`\s`는 공백 문자(공백, 개행 및 탭)와 일치합니다. `\S`는 공백이 아닌 모든 문자와 일치합니다.
+`\s`는 공백 문자(`[ \f\n\r\t\v]`)와 일치합니다. `\S`는 공백이 아닌 모든 문자(`[^ \f\n\r\t\v]`)와 일치합니다.
 
 `\s` matches white space characters: space, new line and tab. `\S` matches any non-whitespace character.
 
