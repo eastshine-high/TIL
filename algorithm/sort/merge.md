@@ -116,3 +116,11 @@ void printArray(int value[], int count)
 	printf("\n");
 }
 ```
+
+<br>
+
+### 참조
+
+<파이썬 알고리즘 인터뷰, 책만, 박상길>
+
+<자료구조, FREELEC, 이상진>
