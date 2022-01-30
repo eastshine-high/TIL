@@ -2,8 +2,6 @@
 
 대표적인 빌드 자동화 도구로 Maven과 Gradle을 들 수 있다. 따라서 Java 프로젝트는 Maven에서도 만들 수 있다. Maven 프로젝트의 폴더 구조를 Gradle은 그대로 활용한다. Gradle은 Maven을 좀 더 쓰기 좋게 DSL(Domain Specific Language)로 스크립트를 작성한다. Gradle의 빌드 스크립트들은 Groovy 혹은 Kotlin DSL로 작성할 수 있다.
 
-<br>
-
 ## Gradle을 이용해 Java application을 만들고 이에 대해 학습해 보자.
 
 ### Gradle 프로젝트 시작
@@ -93,8 +91,6 @@ BUILD SUCCESSFUL in 31m 16s
 └── settings.gradle
 ```
 
-<br>
-
 ## 프로젝트 파일에 대한 설명
 
 ### settings.gradle (전체 프로젝트에 대한 그레이들 설정)
@@ -109,8 +105,6 @@ include('app')
 
 - rootProject.name : 빌드의 이름을 지정한다.
 - include('app') : 빌드는 하위 프로젝트들로 구성되는데, `app`이 실제 빌드 로직 코드를 가지고 있음을 정의한다.
-
-<br>
 
 ### ~/app/build.gradle (app프로젝트에 관한 그레이들 설정)
 
@@ -159,8 +153,6 @@ tasks.named('test') {
 5. 어플리케이션의 main 클래스를 정의한다.
 6. 단위 테스트들을 위해 JUnit Platform을 사용한다.
 
-<br>
-
 ### ~/app/src/main/java/com/eastshine/possessions/App.java
 
 ```bash
@@ -182,8 +174,6 @@ public class App {
 
 - `app` 프로젝트의 main 클래스이다.
 
-<br>
-
 ### .gradle : 그레이들 설정 디렉토리
 
 ### .idea : 인텔리J 설정 디렉토리(참고)
@@ -193,8 +183,6 @@ public class App {
 ### gradlew.bat : 윈도우용 빌드 실행 파일
 
 ### gradlew : mac, linux용 빌드 및 실행 파일
-
-<br>
 
 ## application 실행
 
@@ -211,8 +199,6 @@ Hello World!
 BUILD SUCCESSFUL in 7s
 ```
 
-<br>
-
 ## Bundle the application
 
 application plugin은 또한 모든 의존성들을 묶는다.
@@ -225,8 +211,6 @@ BUILD SUCCESSFUL in 0s
 ```
 
 빌드가 성공하면, Gradle은 두 형태의 묶음(archive)을 만든다(app/build/distributions/app.tar and app/build/distributions/app.zip).
-
-<br>
 
 ### Cf. 커멘드 라인에서 IntelliJ로 현재 디렉토리 실행하기
 
@@ -242,12 +226,14 @@ $ idea .
 
 (위와 같은 방식이 아닌 인텔리제이 파일 열기로도 실행 가능)
 
-<br>
-
----
-
-### Reference
+### 참조
 
 docs.gradle.org에 있는 User Manual을 참조하여 다음 글을 작성.
 
 [https://docs.gradle.org/current/samples/sample_building_java_applications.html](https://docs.gradle.org/current/samples/sample_building_java_applications.html)
+
+<style>
+h1, h2, h3{
+    padding-top:7px;
+}
+</style>
