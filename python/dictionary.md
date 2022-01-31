@@ -4,8 +4,6 @@
 - 사전은 변경 가능한 자료형으로 값을 저장할 때도 키를 사용한다. 키가 사전에 등록되어 있지 않으면 새로운 항목이 만들어지며, 키가 이미 사전에 등록되어 있으면 이 키에 해당하는 값이 변경된다.
 - 사전을 출력하면 당연히 어떤 순서에 의해서 입력 값들이 표현된다. 그러나 이런 순서는 고정된 것이 아니다.(3.7 버전 부터는 LIFO 순서가 보장된다) 키에 의한 검색 속도를 빠르게 하기 위해 사전은 내부적으로 해시 기법을 이용하여 데이터를 저장한다. 이 기법은 데이터의 크기가 증가해도 빠른 속도로 데이터를 찾을 수 있게 해준다.
 
-<br>
-
 ## Dictionary의 생성
 
 - Dictionary는 중괄호 안에 쉼표로 구분된 `키:값` 쌍 목록을 배치하여 만들 수 있다.
@@ -26,9 +24,7 @@ True
 
 [https://docs.python.org/3.10/library/stdtypes.html#mapping-types-dict](https://docs.python.org/3.10/library/stdtypes.html#mapping-types-dict)
 
-<br>
-
-## 사전의 뷰(Dictionary view objects)
+## Dictionary view objects(사전의 뷰)
 
 `[dict.keys()](https://docs.python.org/3.10/library/stdtypes.html#dict.keys)`, `[dict.values()](https://docs.python.org/3.10/library/stdtypes.html#dict.values)`, `[dict.items()](https://docs.python.org/3.10/library/stdtypes.html#dict.items)` 에 의해 반환되는 객체들은 뷰 객체들인다. 여기서 뷰란 사전 항목들을 동적으로 볼 수 있는 객체이다. 동적이란 의미는 사전의 내용이 바뀌어도 뷰를 통해서 내용의 변화를 읽어 낼 수 있다는 의미이다.
 
@@ -82,15 +78,15 @@ robin the brave
 
 키와  항목에 대한 사전 뷰들은 항목들이 유일하고 중복되지 않는다는 점에서 집합과 유사한 특성이 있다. 사전의 뷰 객체들은 집합 연산을 허용한다.
 
-<br>
+## Looping Techniques
 
-## 사전의 메서드
+[https://docs.python.org/3/tutorial/datastructures.html#looping-techniques](https://docs.python.org/3/tutorial/datastructures.html#looping-techniques)
 
-파이썬 docs([https://docs.python.org/3.10/library/stdtypes.html#mapping-types-dict](https://docs.python.org/3.10/library/stdtypes.html#mapping-types-dict))를 참조하자.
+## Dictionary의 메서드
 
-<br>
+[https://docs.python.org/3.10/library/stdtypes.html#mapping-types-dict](https://docs.python.org/3.10/library/stdtypes.html#mapping-types-dict)
 
-## 사전 내장(Dictionary Comprehension)
+## Dictionary Comprehension(사전 내장)
 
 리스트 내장과 유사한 방식으로 동작하지만 사전을 만들어 낸다. 사전 내장은 중괄호 `{}`를 사용하며 `키:값` 형식으로 항목을 표현한다.
 
@@ -134,12 +130,14 @@ robin the brave
 (2, 1): 3, (2, 2): 4}
 ```
 
-<br>
-
-### Reference
+### 참조
 
 [https://docs.python.org/3/tutorial/datastructures.html#dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
 
-[https://docs.python.org/3/tutorial/datastructures.html#looping-techniques](https://docs.python.org/3/tutorial/datastructures.html#looping-techniques)
-
 <파이썬3 바이블, 이강성, 프리렉>
+
+<style>
+h1, h2, h3{
+    padding-top:7px;
+}
+</style>
