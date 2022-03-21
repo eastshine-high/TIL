@@ -15,9 +15,7 @@ Wikipedia에서는 다음과 같이 HTML을 정의한다.
 
 최종적으로 웹에서 자유롭게 오갈 수 있는 웹 문서를 만드는 언어가 HTML이라고 정리할 수 있다.
 
-<br>
-
-### HTML의 구조
+## HTML의 구조
 
 ```HTML
 <!DOCTYPE html>
@@ -41,8 +39,6 @@ Wikipedia에서는 다음과 같이 HTML을 정의한다.
 - `<head>` : 사용자에게 보여지는 UI 적인 요소는 없다. 구글에서 검색할 때 나오는 타이틀이나 부가 설명 그리고 북마크를 추가할 때 나오는 제목이나 아이콘들이 정의되어 있다 그리고 css 파일이 있다면 css 파일을 연결하는 것도 head 영역에서 진행이 된다. 즉 메타 데이터들을 정의한다.
 - `<body>` : 사용자에게 보여주는 가장 중요한 최상의 컨테이너이다. 여기에 작성한 내용이 사용자에게 보여진다.
 
-<br>
-
 ### HTML Element vs Tag
 
 - HTML Element는 HTML을 이루는 빌딩 블록이다. 보통 요소로 번역된다.
@@ -54,8 +50,6 @@ Wikipedia에서는 다음과 같이 HTML을 정의한다.
 
 [https://www.bluekatanasoft.com/wp-content/uploads/element-structure.png](https://www.bluekatanasoft.com/wp-content/uploads/element-structure.png)
 
-<br>
-
 ## HTML Element
 
 ### 엘러먼트는 기능을 기준으로 구분할 수 있다.
@@ -66,16 +60,12 @@ Wikipedia에서는 다음과 같이 HTML을 정의한다.
 - 멀티미디어 엘러먼트
 - 폼 엘러먼트, 링크 엘러먼트
 
-<br>
-
 ### 엘러먼트는 Box와 Item으로 구분할 수 있다.
 
 - Item : 실제 사용자의 눈에 보인다.
     - a, video, button, audio, input, map, label, canvas, img, table..
 - Box : 사용자의 눈에는 보이지 않는다. 섹션링을 통해 Item들을 정리한다.
     - header, section, footer, article, nav, div, aside, span, main, form..
-
-<br>
 
 ### 엘러먼트는 블록 레벨과 인라인 레벨로 구분할 수 있다.
 
@@ -84,28 +74,24 @@ Wikipedia에서는 다음과 같이 HTML을 정의한다.
 - 인라인 레벨(inline-level) : 줄을 차지하지 않는다.
     - img, object, br, sub, sup, span, input, textarea, label, button
 
-<br>
+### 엘러먼트에 대한 참조들
 
-### Elements Reference
+[HTML의 여러 Element들의 자세한 Document(MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-[HTML Element들의 자세한 사용법은 MDN Docs를 참조하자.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+[웹 사이트의 구조(Box와 Item의 사용)](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
 
-[링크를 참조하여 Box와 Item을 이용한 웹 사이트의 구조(HTML5)에 대해 이해해 보자.](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+태그를 통해 작성한 HTML 문서가 유효한 지를 확인하고 싶다면 [validator.w3.org ](https://validator.w3.org/)사이트를 이용하자.
 
-[태그를 통해 작성한 HTML 문서가 유효한 지를 확인하고 싶다면 validator 사이트를 이용하자.](https://validator.w3.org/)
-
-<br>
-
-### Character entities
+## Character entities
 
 어떤 문자들(characters)은 HTML에 의해 예약(reserved)되어 있다. 만약 `<` 문자나 `>` 문자를 텍스트로 사용하려고 하면, 브라우저는 HTML 태그와 혼동한다. Character entities는 HTML에 의해 예약된 문자들을 나타내기 위해서 사용한다.
 
 **자주 사용하는 Character entities**
 
-`' '(space 1칸)` &nbsp; (non-breaking space)
-
-`<` &lt; &LT;
-
-`>`  &gt; &GT;
+- `&nbsp;` : (space 1칸)
+    - non-breaking space을 의미한다. 공백 엔티티 중의 하나이다.
+    - 외에도 `&ensp;`, `&emsp;` 등의 공백 엔티티가 있다. `&emsp;`는 Em Space를 의미한다. Em은 CSS에서 부모 엘러먼트 폰트 크기에 상대적인 단위이다.
+- `&lt;` `&LT;` : &lt;
+- `&gt;` `&GT;` : &gt;
 
 Character entities Reference : [https://dev.w3.org/html5/html-author/charref](https://dev.w3.org/html5/html-author/charref)
