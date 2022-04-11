@@ -1,19 +1,16 @@
-# 중괄호를 사용하면 문자 반복을 정확하게 지정할 수 있습니다
+# 반복 찾기(Repeating matches)
 
-**중괄호를 사용하면 문자 반복을 정확하게 지정할 수 있습니다.** {m}은 정확히 m번 일치하고(Case 1), {m,n}은 최소 m번, 최대 n번 일치하고(Case 2) {m,}는 최소 m번 일치를 지정합니다(Case 3).
+### 중괄호를 사용하면 문자 반복을 정확하게 지정할 수 있습니다.
 
-Curly brackets enable precise specification of character repetitions. 
-* `{m}` matches precisely m times (Case 1)
-* `{m,n}` matches minimaly m times and maximaly n times (Case 2)
-* `{m,}` matches minimaly m times(Case 3).
+- {m}은 정확히 m번 일치합니다(Case 1).
+- {m,n}은 최소 m번, 최대 n번 일치합니다(Case 2).
+- {m,}는 최소 m번 일치를 지정합니다(Case 3).
 
-<br>
+Curly brackets enable precise specification of character repetitions. {m} matches precisely m times (Case 1), {m,n} matches minimaly m times and maximaly n times (Case 2) and {m,}matches minimaly m times(Case 3).
 
 ### Source
 
 One ring to bring them all and in the darkness bind them
-
-<br>
 
 ### Case 1
 
@@ -23,8 +20,6 @@ First match : `One r`ing to bring them all and in the darkness bind 
 
 All matches : `One ring to bring them all and in the darkness bind the`m
 
-<br>
-
 ### Case 2
 
 Regular Expression : **[els]{1,3}**
@@ -32,8 +27,6 @@ Regular Expression : **[els]{1,3}**
 First match : On`e` ring to bring them all and in the darkness bind them
 
 All matches : On`e` ring to bring th`e`m a`ll` and in the darkn`ess` bind th`e`m
-
-<br>
 
 ### Case 3
 
@@ -43,8 +36,6 @@ First match : One `ring` to bring them all and in the darkness bind 
 
 All matches : One `ring` to `bring` `them` `all` `and` in `the` `darkness` `bind` `them`
 
-<br>
-
-### Reference
+### 참조
 
 [http://zvon.org/comp/r/tut-Regexp.html#Pages~Page_15](http://zvon.org/comp/r/tut-Regexp.html#Pages~Page_15)
