@@ -1,6 +1,10 @@
 # 중괄호 표기법의 특수한 경우
 
-수량자(Quantifiers) `*`, `+` , `?`은 중괄호 표기법의 특수한 경우입니다. `*`는 {0,}(Case 1, Case 2), `+`는 {1,}(Case 3, Case 4) 및 `?` {0,1}(사례 5, 사례 6).
+수량자 `*`, `+` , `?`은 중괄호 표기법의 특수한 경우입니다.
+
+- `*`는 `{0,}` 와 같습니다(Case 1, Case 2).
+- `+`는 `{1,}`와 같습니다(Case 3, Case 4).
+- `?`는 `{0,1}`와 같습니다(Case 5, Case 6).
 
 Quantifiers `*`*, `+`, and `?` are special cases of the bracket notation.*
 
@@ -8,13 +12,9 @@ Quantifiers `*`*, `+`, and `?` are special cases of the bracket notation.*
 - `+` to {1,} (Case 3, Case 4)
 - `?` to {0,1} (Case 5, Case 6).
 
-<br>
-
 ### Source
 
 AA ABA ABBA ABBBA
-
-<br>
 
 ### Case 1
 
@@ -64,8 +64,6 @@ First match : `AA` ABA ABBA ABBBA
 
 All matches : `AA` `ABA` ABBA ABBBA
 
-<br>
-
-### Reference
+### 참조
 
 [http://zvon.org/comp/r/tut-Regexp.html#Pages~Page_16](http://zvon.org/comp/r/tut-Regexp.html#Pages~Page_16)
