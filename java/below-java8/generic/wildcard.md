@@ -55,7 +55,7 @@ public void pushAll(Iterable<? extends E> src) {
 
 ## 한정적 와일드카드
 
-### 서브타입 와일드카드
+### 서브타입 와일드카드(Upper Bounded Wildcards)
 
 메서드에서 **배열 리스트에 쓰기를 전혀 수행하지 않아 인수로 전달된 배열 리스트를 변경하지 않는다**고 하자. 다음과 같이 와일드카드로 이런 사실을 나타낼 수 있다.
 
@@ -78,7 +78,7 @@ staff.add(manager1);
 
 `add` 메서드의 매개변수 타입은 `? extends Employee`이므로 **이 메서드에 전달할 수 있는 객체는 없다**(물론 `null`을 전달할 수 있지만, `null`은 객체가 아니다.). **요약하자면 `? extends Employee`를 `Employee`로 변환할 수 있지만, 그 어떤 것도 `? extends Employee`로는 변환할 수 없다. 바로 이 점이 `ArrayList<? extends Employee>`에서 읽을 수는 있지만, 쓸 수는 없는 이유다.**
 
-### 슈퍼타입 와일드카드
+### 슈퍼타입 와일드카드(Lower Bounded Wildcards)
 
 위 ‘와일드카드는 어디에 사용할까’의 `Stack` 예시를 이어가서 `pushAll`과 짝을 이루는 `popAll` 메서드를 작성해 보자. `popAll` 메서드는 `Stack` 안의 모든 원소를 주어진 컬렉션으로 옮겨 담는다. 
 
@@ -127,9 +127,9 @@ Predicate<Object> evenLength = e → e.toString().length() % 2 == 0;
 printAll(employees, evenLength);
 ```
 
-### 한정적 **와일드카드 타입을 사용하는 기본 원칙**
+### 한정적 와일드카드 타입을 사용하는 기본 원칙
 
-메시지는 분명하다. 유연성을 극대화하려면 원소의 생산자나 소비자용 입력 매개변수에 와일드카드 타입을 사용하라. 한편, 입력 매개변수가 생상자와 소비자 역할을 동시에 한다면 와일드카드 타입을 써도 좋을 게 없다. 타입을 정확히 지정해야 하는 상황으로, 이때는 와일드카드 타입을 쓰지 말아야 한다.
+메시지는 분명하다. 유연성을 극대화하려면 원소의 생산자나 소비자용 입력 매개변수에 와일드카드 타입을 사용하라. 한편, 입력 매개변수가 생산자와 소비자 역할을 동시에 한다면 와일드카드 타입을 써도 좋을 게 없다. 타입을 정확히 지정해야 하는 상황으로, 이때는 와일드카드 타입을 쓰지 말아야 한다.
 
 **다음 공식을 외워두면 어떤 와일드카드 타입을 써야 하는지 기억하는 데 도움이 될 것이다.**
 
@@ -138,7 +138,7 @@ printAll(employees, evenLength);
 
 즉, 매개변수화 타입 `T`가 생산자라면 `<? extends T>`를 사용하고, 소비자라면 `<? super T>`를 사용하라. `Stack` 예에서 `pushAll`의 `src` 매개변수는 `Stack`이 사용할 `E` 인스턴스를 생산하므로 src의 적절한 타입은 `Iterable<? extends E>`이다. 한편, `popAll`의 `dst` 매개변수는 `Stack`으로부터 `E` 인스턴스를 소비하므로 `dst`의 적절한 타입은 `Collection<? super E>`이다. **PECS** 공식은 와일드카드 타입을 사용하는 기본 원칙이다**.** 나프탈린(Naftalin)과 와들러(Wadler)는 이를 ‘Get and Put Principle’으로 부른다.
 
-## 비한정적 와일드카드
+## 비한정적 와일드카드(Unbounded Wildcards)
 
 **아주 일반적인 연산만 수행하는 상황에서는 경계 없는 와일드카드를 사용할 수 있다.** 예를 들어 다음 코드는 `ArrayList`에 `null` 요소가 들어 있는지 검사하는 메서드다.
 
@@ -159,7 +159,7 @@ public static boolean hasNulls(ArrayList<T> elements)
 
 **하지만 와일드카드가 더 이해하기 쉬우므로 와일드카드를 이용한 방법이 더 적절하다.**
 
-### 와일드카드 캡처
+### 와일드카드 캡처(wildcard capture)
 
 와일드카드를 이용해 swap 메서드를 정의해 보자.
 
@@ -187,9 +187,9 @@ public static void swapHelper(ArrayList<T> elements, int i, int j) {
 }
 ```
 
-와일드카드 캡처(wildcard capture)라는 특별한 규칙 덕분에 swapHelper 호출은 유효하다. 컴파일러는 `?`가 무엇인지 모르지만, `?`는 어떤 타입을 나타내므로 제네릭 메서드를 호출해도 된다. swapHelper 메서드의 `T`타입 매개변수는 와일드카드 타입을 '캡처(capture)'한다. swapHelper는 매개변수에 와일드카드가 포함된 메서드가 아니라 제네릭 메서드이므로 T타입 변수로 변수를 선언할 수 있다.
+**와일드카드 캡처(wildcard capture)**라는 특별한 규칙 덕분에 swapHelper 호출은 유효하다. 컴파일러는 `?`가 무엇인지 모르지만, `?`는 어떤 타입을 나타내므로 제네릭 메서드를 호출해도 된다. swapHelper 메서드의 `T`타입 매개변수는 와일드카드 타입을 '캡처(capture)'한다. swapHelper는 매개변수에 와일드카드가 포함된 메서드가 아니라 제네릭 메서드이므로 T타입 변수로 변수를 선언할 수 있다.
 
-와일드카드 캡처로 얻을 수 있는 이점은 뭘까? API 사용자가 제네릭 메서드 대신 이해하기 쉬운 `ArrayList<?>`를 볼 수 있다는 이점을 얻을 수 있다.
+와일드카드 캡처로 얻을 수 있는 이점은 뭘까? **API 사용자가 제네릭 메서드 대신 이해하기 쉬운 `ArrayList<?>`를 볼 수 있다는 이점을 얻을 수 있다.**
 
 ---
 
@@ -198,9 +198,3 @@ public static void swapHelper(ArrayList<T> elements, int i, int j) {
 <카이 호스트만, 가장 빨리 만나는 코어 자바9, 길벗>
 
 <조슈아 블로크, 이펙티브 자바 3/E, 인사이트>
-
-<style>
-h1, h2, h3{
-    padding-top:7px;
-}
-</style>
