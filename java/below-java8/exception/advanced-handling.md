@@ -55,9 +55,3 @@ catch(SQLException e) {
 ### 참조
 
 <토비의 스프링 3.1, 이일민, 에이콘>
-
-<style>
-h1, h2, h3{
-    padding-top:7px;
-}
-</style>
