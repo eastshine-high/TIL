@@ -1,10 +1,6 @@
-# Gradle
+**Gradle을 이용해 Java application을 만들고 Java application의 디렉토리 구조에 대해 알아보자.**
 
-대표적인 빌드 자동화 도구로 Maven과 Gradle을 들 수 있다. 따라서 Java 프로젝트는 Maven에서도 만들 수 있다. Maven 프로젝트의 폴더 구조를 Gradle은 그대로 활용한다. Gradle은 Maven을 좀 더 쓰기 좋게 DSL(Domain Specific Language)로 스크립트를 작성한다. Gradle의 빌드 스크립트들은 Groovy 혹은 Kotlin DSL로 작성할 수 있다.
-
-## Gradle을 이용해 Java application을 만들고 이에 대해 학습해 보자.
-
-### Gradle 프로젝트 시작
+## Gradle 프로젝트 시작
 
  `$ gradle init` 명령은 새로운 프로젝트를 생성한다.
 
@@ -228,12 +224,4 @@ $ idea .
 
 ### 참조
 
-docs.gradle.org에 있는 User Manual을 참조하여 다음 글을 작성.
-
 [https://docs.gradle.org/current/samples/sample_building_java_applications.html](https://docs.gradle.org/current/samples/sample_building_java_applications.html)
-
-<style>
-h1, h2, h3{
-    padding-top:7px;
-}
-</style>
