@@ -59,14 +59,14 @@ API 리소스를 모델링할 때, 기본적인 리소스 원형(document, colle
 
 ### 도큐먼트(Document)
 
-도큐먼트 리소스는 객체 인스턴스나 데이터베이스 레코드와 유사한 단일 개념이다. 일반적으로 도큐먼트의 상태 표현은 값을 가진 필드와 다른 관련 리소스와의 링크 둘 다를 가지게 된다. REST에서는 리소스 컬렉션 내의 단일 리소스로 볼 수 있다.
+도큐먼트 리소스는 객체 인스턴스나 데이터베이스 레코드와 유사한 단일 개념이다. 일반적으로 도큐먼트의 상태 표현은 값을 가진 필드와 다른 관련 리소스와의 링크 둘 다를 가지게 된다. 기본적인 필드와 링크 기반 구조로 인해, 도큐먼트 타입은 다른 리소스 원형들의 기반 원형이 된다. 즉, 서로 다른 리소스 원형 세 개는 도큐먼트 원형에서 분리된 것이라 볼 수 있다. 도큐먼트 리소스를 사용할 때는 "단수"를 사용해야 한다.
 
-도큐먼트 리소스를 사용할 때는 "단수"를 사용해야 한다.
+다음 URI는 각각 도큐먼트 리소스를 나타낸다.
 
 ```
-http://api.example.com/device-management/managed-devices/{device-id}
-http://api.example.com/user-management/users/{id}
-http://api.example.com/user-management/users/admin
+http://api.soccer.restapi.org/leagues/seattle
+http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet
+http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players/mike
 ```
 
 ### 컬렉션(Collection)
