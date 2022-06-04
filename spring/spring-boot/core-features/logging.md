@@ -96,7 +96,7 @@ logging:
 ```
 
 - `file-name-pattern`에서 `%d`와 `%i`는 필수적으로 포함되어야 속성이 적용된다.
-- [logback](https://logback.qos.ch/manual/index.html)에 대한 더 상세한 설정을 하고 싶다면 `logback.xml`을 활용하도록 하자. [logback 사용에 대한 설명은 검프님](https://livenow14.tistory.com/64)이 잘 정리해 주셨다.
+- [logback](https://logback.qos.ch/manual/index.html)에 대한 추가적인 설정이 필요하다면 `logback.xml`을 활용하도록 하자. [logback 사용에 대한 설명은 검프님](https://livenow14.tistory.com/64)이 잘 정리해 주셨다.
 
 ### 로그 구성 커스텀하기(**Custom Log Configuration)**
 
