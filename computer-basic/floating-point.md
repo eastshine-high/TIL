@@ -10,7 +10,7 @@
 
 ### 지수(Exponent)
 
-'E'는 지수를 저장하는 부분으로 float의 경우, Java에서는 8 bit의 저장공간을 갖는다. 지수는 '부호 있는 정수'이고 8 bit로는 <!-- $2^8$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5E8">(=256)개의 값을 저장할 수 있으므로, '-127~128'의 값이 저장된다. 이 중에서 127과 128은 '숫자 아님(NaN Not a Number)'이나 '양의 무한대(POSITIVE_INFINITY)', 음의 무한대(NEGATIVE_INFINITY)'와 같이 특별한 값의 표현을 위해 예약되어 있으므로 실제로 사용가능한 지수의 범위는 '-126~127'이다. 그래서 지수의 최대값이 127이므로 float타입으로 표현할 수 있는 최대값은 <!-- $2^{127}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5E%7B127%7D">이고, 10진수로 <!-- $10^{38}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=10%5E%7B38%7D">이다. 그러나 float의 최소값은 가수의 마지막 자리가 <!-- $2^{-23}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5E%7B-23%7D">이므로 지수의 최소값보다 <!-- $2^{23}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5E%7B23%7D">배나 더 작은 값, 약 <!-- $10^{-45}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=10%5E%7B-45%7D">이다.
+'E'는 지수를 저장하는 부분으로 float의 경우, Java에서는 8 bit의 저장공간을 갖는다. 지수는 '부호 있는 정수'이고 8 bit로는 <!-- $2^8$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5E8">(=256)개의 값을 저장할 수 있으므로, '-127`~`128'의 값이 저장된다. 이 중에서 127과 128은 '숫자 아님(NaN Not a Number)'이나 '양의 무한대(POSITIVE_INFINITY)', 음의 무한대(NEGATIVE_INFINITY)'와 같이 특별한 값의 표현을 위해 예약되어 있으므로 실제로 사용가능한 지수의 범위는 '-126`~`127'이다. 그래서 지수의 최대값이 127이므로 float타입으로 표현할 수 있는 최대값은 <!-- $2^{127}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5E%7B127%7D">이고, 10진수로 <!-- $10^{38}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=10%5E%7B38%7D">이다. 그러나 float의 최소값은 가수의 마지막 자리가 <!-- $2^{-23}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5E%7B-23%7D">이므로 지수의 최소값보다 <!-- $2^{23}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=2%5E%7B23%7D">배나 더 작은 값, 약 <!-- $10^{-45}$ --> <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=10%5E%7B-45%7D">이다.
 
 ### 가수(Mantissa)
 
@@ -38,6 +38,6 @@
 
 ---
 
-### Reference
+### 참조
 
 Java의 정석, 도우출판, 남궁성
