@@ -1,4 +1,4 @@
-### 자바가 지원하는 예외 처리 방법에 대해서 알아보자.
+**자바가 지원하는 예외 처리 방법에 대해서 알아보자.**
 
 - 예외 던지기(`throw`)
 - 예외 잡기(`catch`)
@@ -58,7 +58,8 @@ out.close();
 
 이 코드에서 위험 요소가 숨어 있다. 어떤 메서드든 예외를 던지면 out.close()가 호출되지 않는다. 이런 상황은 좋지 않다. 출력을 유실할 수도 있고, 예외가 여러 번 일어나면 시스템이 파일 핸들(file handle)을 소진할 수도 있기 때문이다.
 
-이런 위험 요소는 특별한 형태의 try 문으로 해결할 수 있다. try 문 헤더에 리소스(resource)를 지정할 수 있다. **리소스는 반드시 `AuthCloseable` 인터페이스를 구현하는 클래스에 속해야 한다.** 다음과 같이 try 블록 헤더에 변수를 선언하면 된다.
+이런 위험 요소는 특별한 형태의 try 문으로 해결할 수 있다. try 문 헤더에 리소스(resource)를 지정할 수 있다. **리소스는 반드시 `AuthCloseable` 인터페이스를 구현하는 클래스에 속해야 한다**(`PrintWriter`의 상위 클래스인 `Writer`는 `AuthCloseable`을 구현하고 있다)**.** 사용 방법은 다음과 같이 try 블록 헤더에 변수를 선언하면 된다(Java7).
+
 
 ```java
 ArrayList<String> lines = ...;
@@ -69,7 +70,7 @@ try(PrintWriter out = new PrintWriter("output.txt")){ // 변수 선언
 }
 ```
 
-또는 이전에 선언된 사실상 최종 변수를 헤더에 넣어도 된다.
+또는 이전에 선언된 사실상 최종 변수를 헤더에 넣어도 된다(Java9).
 
 ```java
 PrintWriter out = new PrintWriter("output.txt")
@@ -161,6 +162,6 @@ try {
 
 프로그래머는 `Files.newBufferedReader` 메서드에서 예외를 던지는 상황을 분명히 고려했다. 이 코드는 모든 입출력 예외를 잡아서 출력할 것처럼 보인다. 하지만 실제로는 `in.close()`에서 던질 수도 있는 예외 하나를 놓친다. **보통은 복잡한 try/catch/finally 문을 try-with-resources 문이나 try/catch 문 안에 try/finally를 중첩하는 방법으로 다시 작성하는 것이 낫다.**
 
-### 참조
+## 참조
 
 <가방 빨리 만나는 코어 자바9, 카이 호스트만, 길벗>
