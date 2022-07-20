@@ -99,6 +99,13 @@
 
 ** https://github.com/eastshine-high/til/blob/main/java/below-java8/generic/wildcard.md[Wildcard]
 
+=== Java - build
+
+* Gradle
+
+** https://github.com/eastshine-high/til/blob/main/java/building/gradle/five-things-you-need-to-know-about-gradle.md[Gradle에서 알아야 하는 다섯 가지]
+
+** https://github.com/eastshine-high/til/blob/main/java/building/gradle/building-java-application.md[Java application 빌드하기]
 
 === Java - specification(표준)
 
@@ -134,13 +141,7 @@
 
 * Querydsl
 
-** 쿼리 결과 다루기(Result handling)
-
-=== Java - build
-
-* Gradle
-** https://github.com/eastshine-high/til/blob/main/java/building/gradle/five-things-you-need-to-know-about-gradle.md[Gradle에서 알아야 하는 다섯 가지]
-** https://github.com/eastshine-high/til/blob/main/java/building/gradle/building-java-application.md[Java application 빌드하기]
+** https://github.com/eastshine-high/til/blob/main/java/library-framework/querydsl/result-handling.md[쿼리 결과 다루기(Result handling)]
 
 === https://github.com/eastshine-high/til/tree/main/spring/spring-framework[Spring Framework]
 
@@ -148,15 +149,17 @@
 
 ** https://github.com/eastshine-high/til/blob/main/spring/spring-framework/core/di-container.md[DI 컨테이너]
 
-** Spring MVC
+* Spring MVC
 
-*** https://github.com/eastshine-high/til/tree/main/spring/spring-framework/web-servlet/spring-mvc/dispatcher-servlet[Dispatcher Servlet]
+** https://github.com/eastshine-high/til/tree/main/spring/spring-framework/web-servlet/spring-mvc/dispatcher-servlet[Dispatcher Servlet]
 
-**** https://github.com/eastshine-high/til/tree/main/spring/spring-framework/web-servlet/spring-mvc/dispatcher-servlet/special-bean-types[특수한 객체 유형(Special Bean Types)]
+*** https://github.com/eastshine-high/til/tree/main/spring/spring-framework/web-servlet/spring-mvc/dispatcher-servlet/special-bean-types[특수한 객체 유형(Special Bean Types)]
 
-***** https://github.com/eastshine-high/til/blob/main/spring/spring-framework/web-servlet/spring-mvc/dispatcher-servlet/special-bean-types/handler-adapter.md[HandlerAdapter]
+**** https://github.com/eastshine-high/til/blob/main/spring/spring-framework/web-servlet/spring-mvc/dispatcher-servlet/special-bean-types/handler-adapter.md[HandlerAdapter]
 
-**** https://github.com/eastshine-high/til/blob/main/spring/spring-framework/web-servlet/spring-mvc/dispatcher-servlet/interception.md[인터셉터interceptor)]
+*** https://github.com/eastshine-high/til/blob/main/spring/spring-framework/web-servlet/spring-mvc/dispatcher-servlet/interception.md[인터셉터interceptor)]
+
+** https://github.com/eastshine-high/til/blob/main/spring/spring-framework/web-servlet/spring-mvc/testing.md[Testing]
 
 === Spring Boot
 
@@ -180,7 +183,9 @@
 
 === Docker
 
-- https://github.com/eastshine-high/til/blob/main/docker/dockerfile.md[Dockerfile]
+* https://github.com/eastshine-high/til/blob/main/docker/dockerfile.md[Dockerfile]
+
+* https://github.com/eastshine-high/til/blob/main/docker/docker-run.md[docker run]
 
 === Regular expression(정규 표현식)
 
@@ -202,7 +207,7 @@
 
 ** https://github.com/eastshine-high/til/blob/main/regular-expressions/subexpression/backreferences.md[역참조(Backreferences)]
 
-=== https://github.com/eastshine-high/til/blob/main/css/css.md[CSS]
+=== https://github.com/eastshine-high/til/tree/main/css[CSS]
 
 - https://github.com/eastshine-high/til/blob/main/css/selector.md[Selector]
 
