@@ -23,7 +23,7 @@ HTTP-message   = start-line
 
 위의 그림에서 헤더는 본문에 대한 꾀 많은 정보를 준다. Content-Type 줄은 본문이 무엇인지 말해준다(이 예에서는 플레인 텍스트 문서다). Content-Length 줄은 본문의 크기를 말해준다. 이 예에서는 19 Byte이다.
 
-### Request message
+## Request message
 
 요청 메시지의 형식은 다음과 같다.
 
@@ -39,11 +39,27 @@ GET /search?q=hello&hl=ko HTTP/1.1
 Host: www.google.com
 ```
 
-### Response message
+## Response message
 
 응답 메시지의 형식은 다음과 같다(시작줄에서만 문법이 다르다).
 
---- 
+```
+<HTTP-version> SP <status-code> SP <reason-phrase> CRLF
+<헤더>
+
+<엔터티 본문>
+```
+
+```
+HTTP/1.1 200 OK
+Content-Type: text/html;charset=UTF-8
+Content-Length: 3423
+
+<html>
+	<body>...</body>
+</html>
+
+```
 
 ## 참조
 
