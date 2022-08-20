@@ -121,6 +121,8 @@
 
 *** https://github.com/eastshine-high/til/blob/main/java/specification/jpa-hibernate/persistence-context/persistent-data-status.md[영속 엔티티의 상태]
 
+*** https://github.com/eastshine-high/til/blob/main/java/specification/jpa-hibernate/persistence-context/cascading-entity-state-transitions.md[영속성 전이, 고아 객체 제거]
+
 ** 성능 개선(Performance Tuning)
 
 *** https://github.com/eastshine-high/til/blob/main/java/specification/jpa-hibernate/performance-tuning/fetching.md[Fetching]
