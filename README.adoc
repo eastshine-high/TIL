@@ -161,6 +161,8 @@
 
 *** https://github.com/eastshine-high/til/blob/main/spring/spring-framework/web-servlet/spring-mvc/dispatcher-servlet/interception.md[인터셉터interceptor)]
 
+** https://github.com/eastshine-high/til/blob/main/spring/spring-framework/web-servlet/spring-mvc/json-merge-patch.md[JSON Merge Patch를 이용한 PATCH API 구현]
+
 ** https://github.com/eastshine-high/til/blob/main/spring/spring-framework/web-servlet/spring-mvc/testing.md[Testing]
 
 === Spring Boot
@@ -194,6 +196,10 @@
 * https://github.com/eastshine-high/til/blob/main/docker/dockerfile.md[Dockerfile]
 
 * https://github.com/eastshine-high/til/blob/main/docker/docker-run.md[docker run]
+
+=== Nginx
+
+* https://github.com/eastshine-high/til/blob/main/nginx/basic-usage.md[Nginx 사용 기초]
 
 === Regular expression(정규 표현식)
 
