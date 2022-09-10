@@ -36,13 +36,15 @@ $ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
 - [Runtime constraints on resources](https://docs.docker.com/engine/reference/run/#runtime-constraints-on-resources)
 - [Runtime privilege and Linux capabilities](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)
 
-다음은 [Dockerfile](https://github.com/eastshine-high/til/blob/main/docker/dockerfile.md#dockerfile-%EC%A7%80%EC%8B%9C%EC%96%B4-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0)을 작성하고 `docker build` 명령을 통해 생성한 docker 이미지(스프링 부트 어플리케이션)를 여러 옵션들을 사용하여 실행(`docker run`)하는 예시입니다.
+## `docker run` 예시
+
+다음은 [Dockerfile](https://github.com/eastshine-high/til/blob/main/docker/dockerfile.md#dockerfile-%EC%A7%80%EC%8B%9C%EC%96%B4-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0)을 작성하고 `docker build` 명령을 통해 생성한 docker 이미지(스프링 부트 어플리케이션)를 `docker run`의 여러 옵션들을 사용하여 실행하는 예시입니다.
 
 ```bash
 $ docker run --rm -d --name api-server -v /logs/api.log:/app/logs/api.log app -p 80:8080 -e SPRING_PROFILES_ACTIVE=dev spring-boot-container
 ```
 
-이 페이지에서는 위의 예시에 사용된 `docker run`의 옵션과 관련된 내용을 살펴보고자 합니다. 이를 통해 대략적인 `docker run` 명령의 사용 방법을 학습합니다. `docker run`에 대한 모든 옵션은 위의 [운영자 권한 옵션](https://github.com/eastshine-high/til/tree/main/docker/docker-run.md#%EC%9A%B4%EC%98%81%EC%9E%90%20%EA%B6%8C%ED%95%9C%20%EC%98%B5%EC%85%98%EB%93%A4(Operator%20exclusive%20options))의 링크들을 참조하시면 좋을 것 같습니다.
+이 페이지에서는 위의 예시에 사용된 `docker run`의 옵션과 관련된 내용을 살펴보고자 합니다. 이를 통해 `docker run` 명령의 기본적인 이해 및 사용 방법을 학습합니다. `docker run`에 대한 더 많은 정보는 [공식 문서](https://docs.docker.com/engine/reference/run/)를 참조하시면 좋을 것 같습니다.
 
 ## Detached vs foreground
 
@@ -114,7 +116,7 @@ UUID 식별자는 Docker 데몬에서 가져옵니다. `--name` 옵션을 사용
 
 개발자가 [Dockerfile](https://docs.docker.com/engine/reference/builder/)에서 이미지를 빌드하거나 커밋할 때, 개발자는 이미지가 컨테이너로 시작될 때 적용되는 여러 기본 매개변수를 설정할 수 있습니다. Dockerfile 명령 중 `FROM`, `MAINTAINER`, `RUN`, `ADD` 4개는 런타임에 오버라이드할 수 없습니다. 이 외의 모든 명령어는 `docker run`에서 오버라이드할 수 있습니다. 아래는 개발자가 각 Dockerfile 명령에서 설정했을 수 있는 것과 운영자가 해당 설정을 재정의할 수 있는 방법에 대해 살펴보겠습니다.
 
-### **EXPOSE (incoming ports)**
+### EXPOSE (incoming ports)
 
 `EXPOSE` 지시어를 제외하고 이미지 개발자는 네트워킹에 대한 제어 권한이 없습니다. `EXPOSE` 지시어는 서비스를 제공하는 초기 수신 포트들을 정의합니다. 이 포트들은 컨테이너 안의 프로세스들에서 사용할 수 있습니다. 운영자는 노출된 포트를 추가하기 위해 `--expose` 옵션을 사용할 수 있습니다.
 
@@ -122,7 +124,7 @@ UUID 식별자는 Docker 데몬에서 가져옵니다. `--name` 옵션을 사용
 
 서비스가 수신하는 컨테이너 내부의 포트 번호는 클라이언트가 연결되는 컨테이너 외부에 노출된 포트 번호와 일치할 필요는 없습니다. 예를 들어 컨테이너 내부에서 HTTP 서비스는 포트 80에서 수신 대기 중이므로 이미지 개발자는 Dockerfile에서 `EXPOSE 80`을 지정합니다. 이 포트는 런타임에 `-p 42800:80` 옵션으로 호스트의 42800 포트에 바인딩될 수 있습니다. 호스트 포트와 노출된 포트 간의 매핑을 찾으려면 `docker port`를 사용합니다.
 
-### ****ENV (environment variables)****
+### ENV (environment variables)
 
 Docker는 Linux 컨테이너를 생성할 때 일부 환경 변수를 자동으로 설정합니다. Windows 컨테이너를 생성할 때는 환경 변수를 설정하지 않습니다.
 
@@ -148,7 +150,7 @@ today=Wednesday
 HOME=/root
 ```
 
-### ****VOLUME (shared filesystems)****
+### VOLUME (shared filesystems)
 
 ```
 -v, --volume=[host-src:]container-dest[:<options>]: Bind mount a volume.
@@ -168,6 +170,8 @@ volume 명령은 [볼륨 사용에 대한 자체 문서](https://docs.docker.com
 $ docer run -v $(pwd)/app/src/resources/application-prod.yml:/app/resources/application-prod.yml spring-boot-image
 ```
 
-## 참조
+---
+
+**참조**
 
 [https://docs.docker.com/engine/reference/run/](https://docs.docker.com/engine/reference/run/)
