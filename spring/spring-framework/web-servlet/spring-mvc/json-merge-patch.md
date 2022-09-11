@@ -116,9 +116,9 @@ JSON Merge Patch 문서를 처리하는 서버는 제공된 패치의 내용을 
 - 타겟 문서의 다른 값들은 변경되지 않은 상태로 유지됩니다.
 
 ```json
-//변경 전 기존데이터
+// 변경 전 기존데이터
 {
-		"name": "john"
+    "name": "john",
     "age": "29",
     "home": {
         "address": "seoul",
@@ -129,7 +129,7 @@ JSON Merge Patch 문서를 처리하는 서버는 제공된 패치의 내용을 
 ```
 
 ```json
-//PATCH 메소드를 이용한 변경요청
+// PATCH 메소드를 이용한 변경요청
 {
     "age": "30",
     "home": {
@@ -140,12 +140,12 @@ JSON Merge Patch 문서를 처리하는 서버는 제공된 패치의 내용을 
 ```
 
 ```json
-//변경 후 데이터
+// 변경 후 데이터
 {
-		"name": "john"
+	"name": "john",
     "age": "30",
     "home": {
-        "address": "seoul",
+        "address": "seoul"
     }
 }
 
@@ -383,7 +383,7 @@ public void patchProduct(
 }
 ```
 
-다만 이 경우에는 리소스의 필드를 삭제할 목적으로 해당 필드에 `null` 값을 할당하여 요청하더라도, 컨트롤러 내부에서 `JsonMergePatch` 객체를 생성하는 과정에서 `null` 값이 있는 필드는 생성되지 않고 누락됩니다. 따라서 해당 필드가 삭제되지 않습니다. 이는 Json Merge Patch를 완벽히 구현했다고 볼 수는 없습니다.
+다만 이 경우에는 리소스의 필드를 삭제할 목적으로 해당 필드에 `null` 값을 할당하여 요청하더라도, 컨트롤러 내부에서 `JsonMergePatch` 객체를 생성하는 과정에서 `null` 값이 있는 필드는 생성되지 않고 누락됩니다. 따라서 해당 필드가 삭제되지 않습니다. 이는 Json Merge Patch를 완벽히 구현했다고 볼 수는 없으며, REST API에서 Uniform Interface 조건의 Self descriptive를 위배합니다.
 
 ---
 
