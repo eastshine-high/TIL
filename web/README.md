@@ -1,4 +1,19 @@
-# Web
+## Contents
+
+- [HTML](https://github.com/eastshine-high/til/blob/main/web/html.md)
+- [HTTP](https://github.com/eastshine-high/til/tree/main/web/http)
+    - [URI](https://github.com/eastshine-high/til/blob/main/web/http/uri.md)
+    - [HTTP message](https://github.com/eastshine-high/til/blob/main/web/http/http-message.md)
+    - [REST](https://github.com/eastshine-high/til/tree/main/web/http/rest)
+        - [Client Server](https://github.com/eastshine-high/til/blob/main/web/http/rest/client-server.md)
+        - [Stateless](https://github.com/eastshine-high/til/blob/main/web/http/rest/stateless.md)
+        - API
+            - [리소스 모델링](https://github.com/eastshine-high/til/blob/main/web/http/rest/api/resource-modeling.md)
+- [JWT](https://github.com/eastshine-high/til/blob/main/web/jwt.md)
+
+---
+
+## Web
 
 웹(Web)은 다음의 고민에서 출발했다.
 
@@ -15,6 +30,8 @@
 
 이후 웹은 폭발적으로 성장하여 5년간 사용자 수가 4천만 명으로 급등했으며, 어느 시점에서는 사용자 수가 두 달간 두 배 증가하기도 했다. 버너스리가 사용했던 '문서의 우주'는 그렇게 팽창했다.
 
-### 참조
+---
 
-<마크 메세, REST API 디자인 규칙, 한빛미디어>
+**참조**
+
+<마크 마세, REST API 디자인 규칙, 한빛미디어>
