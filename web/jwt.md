@@ -104,14 +104,14 @@ import io.jsonwebtoken.security.Keys;
 // 클래스 부분은 생략한다
 
 public String makeSignature(){
-		String secret = "1234567890123456789012";
-		Key key = Keys.hmacShaKeyFor(secret.getBytes());
-		//hmacShaKeyFor메소드는 HMAC-SHA256 algorithms과 바이트로 된 암호(a secret)를 가지고 비밀키를 만든다.
-		
-		return Jwts.builder()
-			     .claim("userId", 1L)
-			     .signWith(key)
-			     .compact();
+	String secret = "1234567890123456789012";
+	Key key = Keys.hmacShaKeyFor(secret.getBytes());
+	//hmacShaKeyFor메소드는 HMAC-SHA256 algorithms과 바이트로 된 암호(a secret)를 가지고 비밀키를 만든다.
+
+	return Jwts.builder()
+				.claim("userId", 1L)
+				.signWith(key)
+				.compact();
 }
 ```
 
@@ -137,11 +137,11 @@ Authorization: Bearer <token>
 
 ![https://cdn2.auth0.com/docs/media/articles/api-auth/client-credentials-grant.png](https://cdn2.auth0.com/docs/media/articles/api-auth/client-credentials-grant.png)
 
-1. 앱 또는 클라이언트는 인가(Authorization) 서버에 권한 부여(Authorization)를 요청한다. 이것은 여러 인가 흐름 중에 한 방법으로 진행됩니다. 예를 들어, 일반적인 Open ID Connect 호환 웹 응용 프로그램은 인증 코드 흐름을 사용하여 /oauth/authorize의 끝점을  통과합니다.
-2. 권한 부여가 완료되면 인가 서버는 접근 토큰(access token)을 요청한 어플리케이션에 반환합니다.
-3. 어플리케이션은 보호된 리소스에 접근하기 위해 받은 접근 토큰(access token)을 사용합니다.
+1. 앱 또는 클라이언트는 인가(Authorization) 서버에 권한 부여(Authorization)를 요청한다. 이것은 여러 인가 흐름 중에 한 방법으로 진행된다. 예를 들어, 일반적인 Open ID Connect 호환 웹 응용 프로그램은 인증 코드 흐름을 사용하여 /oauth/authorize의 끝점을  통과한다.
+2. 권한 부여가 완료되면 인가 서버는 접근 토큰(access token)을 요청한 어플리케이션에 반환한다.
+3. 어플리케이션은 보호된 리소스에 접근하기 위해 받은 접근 토큰(access token)을 사용한다.
 
-주의. 서명된 토큰들 모두, 토큰 안에 모든 정보들이 들어갑니다. 이것을 변조할 수 없더라도 사용자나 다른 그룹에 노출되기 때문에 비밀 정보를 토큰 안에 넣어서는 안 됩니다.
+주의. 서명된 토큰들 모두, 토큰 안에 모든 정보들이 들어간다. 이것을 변조할 수 없더라도 사용자나 다른 그룹에 노출되기 때문에 비밀 정보를 토큰 안에 넣어서는 안 된다.
 
 ### 지금까지의 작업을 실습해 보자.
 
@@ -163,37 +163,37 @@ import java.security.Key;
 @RestController
 @RequestMapping("/products")
 public class JwtHandler{
-		private final JwtHandler jwtHandler;
-		private final Key key;
+	private final JwtHandler jwtHandler;
+	private final Key key;
 
     //secret은 application.yml에 보관
-		public JwtHandler(@Value("${jwt.secret}") String secret) {
-        key = Keys.hmacShaKeyFor(secret.getBytes());
-		}
+	public JwtHandler(@Value("${jwt.secret}") String secret) {
+		key = Keys.hmacShaKeyFor(secret.getBytes());
+	}
 
-		@PostMapping
-		@ResponseStatus(HttpStatus.CREATED)
-		public ResponseEntity create(
-		        @RequestHeader("Authorization") String authorization,
-		        @RequestBody @Valid ProductData productData
-		) {
-		    String accessToken = authorization.substring("Bearer ".length());
-		
-				Claims claims = Jwts.parserBuilder()
-										      .setSigningKey(key)
-										      .build()
-										      .parseClaimsJws(accessToken)
-										      .getBody();
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	public ResponseEntity create(
+			@RequestHeader("Authorization") String authorization,
+			@RequestBody @Valid ProductData productData
+	) {
+		String accessToken = authorization.substring("Bearer ".length());
+	
+		Claims claims = Jwts.parserBuilder()
+								.setSigningKey(key)
+								.build()
+								.parseClaimsJws(accessToken)
+								.getBody();
 
-				...
+		...
 
-		}
+	}
 }
 ```
 
 ---
 
-## 참조
+**참조**
 
 JWT : [https://jwt.io/introduction](https://jwt.io/introduction)
 
