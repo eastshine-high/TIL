@@ -46,6 +46,8 @@ DTO로 직접 조회 하려면 JPA의 `new` 명령어를 사용합니다. 그리
 List<MemberDto> findMemberDto();
 ```
 
+- `new study.datajpa.dto.MemberDto` : 패키지명을 모두 적어주어야 합니다.
+
 ### 컬렉션 파라미터 바인딩
 
 `IN`을 사용하는 쿼리의 파라미터에 바인딩을 할 때 주로 사용합니다.
@@ -164,6 +166,10 @@ public void bulkUpdate() throws Exception {
     - 다음과 같이 옵션을 사용합니다. `@Modifying(clearAutomatically = true)` (이 옵션의 기본값은 false)
     - 이 옵션 없이 회원을 `findById`로 다시 조회하면 영속성 컨텍스트에 과거 값이 남아서 문제가 될 수 있습니다. 만약 다시 조회해야 한다면 꼭 영속성 컨텍스트를 초기화합니다.
     - 혹은 JPA의 `EntityManager` 를 주입받아 `em.flush(); em.clear();` 를 수행합니다.
+
+## Pagination
+
+쿼리 메소드의 페이징 기능은 다른 페이지에서 정리하였으니 [링크](https://github.com/eastshine-high/til/blob/main/spring/spring-data/spring-data-jpa/pagination.md)를 참조해 주세요!
 
 ---
 
