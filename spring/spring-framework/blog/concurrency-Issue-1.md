@@ -1,6 +1,6 @@
 # 동시성 문제(1) - 동시성 문제 살펴보기
 
-[후편 - MySQL에서 동시성 문제 해결하기](https://github.com/eastshine-high/til/blob/main/spring/spring-framework/blog/concurrency-Issue-1.md)
+[후편 - MySQL에서 동시성 문제 해결하기](https://github.com/eastshine-high/til/blob/main/spring/spring-framework/blog/concurrency-Issue-2.md)
 
 이번 페이지에서는 간단한 재고 감소 예제를 통해 동시성 이슈를 알아보겠습니다.
 
@@ -149,7 +149,7 @@ public class ProductService {
 | update set stock_quantity = 99 from product where product_id = 1 | {product_id: 1, stock_quantity: 99} |  |
 |  | {product_id: 1, stock_quantity: 99} | update set stock_quantity = 99 from product where product_id = 1 |
 
-따라서 데이터베이스에서 지원하는 방법으로 레이스 컨디션 문제를 해결해야 합니다. 다음 페이지에서는 [MySQL을 이용해 데이터 정합성을 맞추는 방법](https://github.com/eastshine-high/til/blob/main/spring/spring-framework/blog/concurrency-Issue-1.md)에 대해서 알아보겠습니다.
+따라서 데이터베이스에서 지원하는 방법으로 레이스 컨디션 문제를 해결해야 합니다. 다음 페이지에서는 [MySQL을 이용해 데이터 정합성을 맞추는 방법](https://github.com/eastshine-high/til/blob/main/spring/spring-framework/blog/concurrency-Issue-2.md)에 대해서 알아보겠습니다.
 
 ---
 
