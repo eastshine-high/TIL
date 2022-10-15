@@ -1,14 +1,25 @@
-## Contents
+# WEB - HTTP
+
+## Table of Contents
 
 - [HTML](https://github.com/eastshine-high/til/blob/main/web/html.md)
+
 - [HTTP](https://github.com/eastshine-high/til/tree/main/web/http)
+
     - [URI](https://github.com/eastshine-high/til/blob/main/web/http/uri.md)
+
     - [HTTP message](https://github.com/eastshine-high/til/blob/main/web/http/http-message.md)
+
     - [REST](https://github.com/eastshine-high/til/tree/main/web/http/rest)
+
         - [Client Server](https://github.com/eastshine-high/til/blob/main/web/http/rest/client-server.md)
+
         - [Stateless](https://github.com/eastshine-high/til/blob/main/web/http/rest/stateless.md)
+
         - API
+
             - [리소스 모델링](https://github.com/eastshine-high/til/blob/main/web/http/rest/api/resource-modeling.md)
+
 - [JWT](https://github.com/eastshine-high/til/blob/main/web/jwt.md)
 
 ---
