@@ -268,7 +268,7 @@
 
 - [Function call](https://github.com/eastshine-high/til/blob/main/c/function-call.md)
 
-## [CSS](https://github.com/eastshine-high/til/blob/main/css/css.md)
+## [CSS](https://github.com/eastshine-high/til/tree/main/css)
 
 - [Selector](https://github.com/eastshine-high/til/blob/main/css/selector.md)
 
