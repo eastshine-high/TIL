@@ -20,7 +20,7 @@
 
 - Blog
 
-    - [JSON Merge Patch를 이용한 PATCH API 구현](https://github.com/eastshine-high/til/blob/main/spring/spring-framework/web-servlet/spring-mvc/json-merge-patch.md)
+    - [JSON Merge Patch를 이용한 PATCH API 구현](https://github.com/eastshine-high/til/blob/main/spring/spring-framework/blog/json-merge-patch.md)
 
     - [동시성 문제(1) - 동시성 문제 살펴보기](https://github.com/eastshine-high/til/blob/main/spring/spring-framework/blog/concurrency-Issue-1.md)
 
