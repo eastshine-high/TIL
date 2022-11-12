@@ -19,6 +19,16 @@ for (Tuple row : result) {
 }}
 ```
 
+`selectFrom` 으로 조회할 경우, `Tuple` 이 아닌 도메인 엔터티를 반환합니다.
+
+```java
+Order order = query.selectFrom(QOrder.order)
+                .join(QOrder.order.orderLines, orderLine).fetchJoin()
+                .where(QOrder.order.id.eq(orderId)
+                        .and(QOrder.order.userId.eq(userId)))
+                .fetchOne();
+```
+
 ### 단일 칼럼 반환하기
 
 칼럼 하나를 반환할 경우, 반환 타입을 명확하게 지정할 수 있습니다. 아래 예제를 보면, `Tuple`이 아닌 `String` 타입을 명시한 것을 확인할 수 있습니다.
@@ -136,7 +146,9 @@ Map<Integer, Group> results = query.from(post, comment)
 
 위 예시는 게시물 이름과 댓글 ID에 접근할 수 있는 `Group` 인스턴스에 대한 게시물 ID 맵이 반환됩니다. `Group`은 `Tuple` 인터페이스에 해당하는 GroupBy입니다.
 
-## 참조
+---
+
+**참조**
 
 [http://querydsl.com/static/querydsl/4.4.0/reference/html_single/#result_handling](http://querydsl.com/static/querydsl/4.4.0/reference/html_single/#result_handling)
 
