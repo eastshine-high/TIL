@@ -228,20 +228,6 @@
 
 - [인증(Authentication)](https://github.com/eastshine-high/til/tree/main/spring/spring-security/authentication)
 
-## Spring Data
-
-- Spring Data JPA
-
-    - Query Methods
-
-        - [메소드 이름으로 쿼리 정의하기](https://github.com/eastshine-high/til/blob/main/spring/spring-data/spring-data-jpa/query-methods/defining-query-from-the-method-name.md)
-
-        - [다양한 방법으로 쿼리 정의하기](https://github.com/eastshine-high/til/blob/main/spring/spring-data/spring-data-jpa/query-methods/the-various-ways-to-create-a-query-method.md)
-
-    - [Auditing](https://github.com/eastshine-high/til/blob/main/spring/spring-data/spring-data-jpa/auditing.md)
-
-    - [Pagination](https://github.com/eastshine-high/til/blob/main/spring/spring-data/spring-data-jpa/pagination.md)
-
 ## 정규표현식
 
 - [문자 하나 찾기](https://github.com/eastshine-high/til/blob/main/regular-expressions/matching-single-characters.md)
