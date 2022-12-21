@@ -29,7 +29,7 @@
 
 다음은 URL의 전체 구성 요소입니다.
 
-`scheme`://[`userinfo`@]`host`[:`port`][/`path`][?`query`][#`fragment`]
+`scheme`://[`userinfo@`]`host`[:`port`][/`path`][?`query`][#`fragment`]
 
 구성 요소를 하나하나 살펴보겠습니다.
 
@@ -76,9 +76,9 @@
 > scheme://[userinfo@]host[`:port`][/path][?query][#fragment]
 > 
 
-> https://www.google.com`:443`/search?q=hello&hl=ko
+> https://<rm-link>www.<rm-link>google.com`:443`/search?q=hello&hl=ko
 > 
-> http://localhost`:3000`
+> http://<rm-link>localhost`:3000`
 > 
 
 - 포트는 서버가 열어놓은 네트워크 포트를 가리킵니다.
@@ -105,7 +105,7 @@
 > scheme://[userinfo@]host[:port][/path][`?query`][#fragment]
 > 
 
-> https://www.google.com:443/search`?q=hello&hl=ko`
+> https://<rm-link>www.<rm-link>google.com:443/search`?q=hello&hl=ko`
 > 
 - 요청받을 리소스 형식의 범위를 좁히기 위해서 질문이나 질의를 받을 수 있습니다(주로 데이터베이스 같은 서비스).
 - 물음표 `?`의 우측에 있는 값들을 질의라 부릅니다.
@@ -117,7 +117,7 @@
 > scheme://[userinfo@]host[:port][/path][?query][`#fragment`]
 >
 
-> https://docs.spring.io/spring-boot/docs/current/reference/html/features.html`#features.internationalization`
+> https://<rm-link>docs.spring.io/spring-boot/docs/current/reference/html/features.html`#features.internationalization`
 > 
 
 - 리소스의 특정 부분을 가리킬 수 있도록, URL은 리소스 내의 조각을 가리킬 수 있는 fragment를 제공합니다.
