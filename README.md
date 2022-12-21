@@ -6,7 +6,7 @@
 
 - [소프트웨어 테스트](https://github.com/eastshine-high/til/tree/main/software-testing)
 
-- [WEB - HTTP](https://github.com/eastshine-high/til/tree/main/web)
+- [WEB(HTTP)](https://github.com/eastshine-high/til/tree/main/web)
 
 - [Relational database](https://github.com/eastshine-high/til/tree/main/relational-database)
 
@@ -42,7 +42,7 @@
 
 ## 읽은 책 정리
 
-- [오브젝트(조영호 저)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158391409&orderClick=LAG&Kc=)
+- [오브젝트(조영호 저)](https://github.com/eastshine-high/til/tree/main/books/object)
 
     - [협력, 책임, 역할](https://github.com/eastshine-high/til/blob/main/books/object/collaboration-responsibility-role.md)
 
@@ -70,27 +70,29 @@
 
     - [CORRECT : 경계 조건 테스트](https://github.com/eastshine-high/til/blob/main/software-testing/unit-test/tactics/boundary-conditions.md)
 
-## [WEB](https://github.com/eastshine-high/til/tree/main/web) - HTTP
+## WEB(HTTP)
 
-- [HTML](https://github.com/eastshine-high/til/blob/main/web/html.md)
+- [Web](https://github.com/eastshine-high/til/tree/main/web)
 
-- [HTTP](https://github.com/eastshine-high/til/tree/main/web/http)
+    - [HTML](https://github.com/eastshine-high/til/blob/main/web/html.md)
 
-    - [URI](https://github.com/eastshine-high/til/blob/main/web/http/uri.md)
+    - [HTTP](https://github.com/eastshine-high/til/tree/main/web/http)
 
-    - [HTTP message](https://github.com/eastshine-high/til/blob/main/web/http/http-message.md)
+        - [URI](https://github.com/eastshine-high/til/blob/main/web/http/uri.md)
 
-    - [REST](https://github.com/eastshine-high/til/tree/main/web/http/rest)
+        - [HTTP message](https://github.com/eastshine-high/til/blob/main/web/http/http-message.md)
 
-        - [Client Server](https://github.com/eastshine-high/til/blob/main/web/http/rest/client-server.md)
+        - [REST](https://github.com/eastshine-high/til/tree/main/web/http/rest)
 
-        - [Stateless](https://github.com/eastshine-high/til/blob/main/web/http/rest/stateless.md)
+            - [Client Server](https://github.com/eastshine-high/til/blob/main/web/http/rest/client-server.md)
 
-        - API
+            - [Stateless](https://github.com/eastshine-high/til/blob/main/web/http/rest/stateless.md)
 
-            - [리소스 모델링](https://github.com/eastshine-high/til/blob/main/web/http/rest/api/resource-modeling.md)
+            - API
 
-- [JWT](https://github.com/eastshine-high/til/blob/main/web/jwt.md)
+                - [리소스 모델링](https://github.com/eastshine-high/til/blob/main/web/http/rest/api/resource-modeling.md)
+
+    - [JWT](https://github.com/eastshine-high/til/blob/main/web/jwt.md)
 
 ## Relational database
 
