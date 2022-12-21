@@ -90,7 +90,7 @@
 > scheme://[userinfo@]host[:port][/`path`][?query][#fragment]
 > 
 
-> https://www.google.com:443/`search`?q=hello&hl=ko
+> https://<rm-link>www.<rm-link>google.com:443/`search`?q=hello&hl=ko
 > 
 
 - 경로는 리소스가 서버의 어디에 있는지 알려줍니다.
