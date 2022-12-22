@@ -71,48 +71,54 @@ Servlet에 대한 스프링 시큐리티의 지원은 `FilterChainProxy`에 포�
 
 위의 그림을 자세히 보면 `SecurityFilterChain0`에는 3개의 보안 필터 인스턴스로 구성되어 있습니다. 그러나 `SecurityFilterChainn`에는 4개의 보안 필터가 구성되어 있습니다. 즉, 각 `SecurityFilterChain`은 고유(unique)하고 별도(isolation)로 구성될 수 있다는 점을 주목해 볼 수 있습니다. 만약 어플리케이션이 Spring Security가 요청들을 무시하기를 원하는 경우, `SecurityFilterChain`는 0개의 보안 필터를 가질 수도 있습니다.
 
-다음은 Multiple SecurityFilterChain의 구성 코드 예시입니다. 복수의 `SecurityFilterChain` `@Bean`을 등록하고 있습니다([Multiple HttpSecurity](https://docs.spring.io/spring-security/reference/servlet/configuration/java.html#_multiple_httpsecurity)).
+다음은 Multiple SecurityFilterChain의 구성 코드 예시입니다. 복수의 `SecurityFilterChain` `@Bean`을 등록하고 있습니다([Multiple HttpSecurity](https://docs.spring.io/spring-security/reference/servlet/configuration/java.html#_multiple_httpsecurity_instances)).
 
 ```java
+@Configuration
 @EnableWebSecurity
 public class MultiHttpSecurityConfig {
-		@Bean                                                             
-		public UserDetailsService userDetailsService() throws Exception {
-				// ensure the passwords are encoded properly
-				UserBuilder users = User.withDefaultPasswordEncoder();
-				InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-				manager.createUser(users.username("user").password("password").roles("USER").build());
-				manager.createUser(users.username("admin").password("password").roles("USER","ADMIN").build());
-				return manager;
-		}
-	
-		@Bean
-		@Order(1)                                                        
-		public SecurityFilterChain apiFilterChain(HttpSecurity http) throws Exception {
-				http
-					.antMatcher("/api/**")                                   
-					.authorizeHttpRequests(authorize -> authorize
-						.anyRequest().hasRole("ADMIN")
-					)
-					.httpBasic(withDefaults());
-				return http.build();
-		}
-	
-		@Bean                                                            
-		public SecurityFilterChain formLoginFilterChain(HttpSecurity http) throws Exception {
-				http
-					.authorizeHttpRequests(authorize -> authorize
-						.anyRequest().authenticated()
-					)
-					.formLogin(withDefaults());
-				return http.build();
-		}
+	@Bean
+	public UserDetailsService userDetailsService() throws Exception { // (1)
+		// ensure the passwords are encoded properly
+		UserBuilder users = User.withDefaultPasswordEncoder();
+		InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+		manager.createUser(users.username("user").password("password").roles("USER").build());
+		manager.createUser(users.username("admin").password("password").roles("USER","ADMIN").build());
+		return manager;
+	}
+
+	@Bean
+	@Order(1)
+	public SecurityFilterChain apiFilterChain(HttpSecurity http) throws Exception { // (2)
+		http
+			.securityMatcher("/api/**"). // (3)
+			.authorizeHttpRequests(authorize -> authorize
+				.anyRequest().hasRole("ADMIN")
+			)
+			.httpBasic(withDefaults());
+		return http.build();
+	}
+
+	@Bean
+	public SecurityFilterChain formLoginFilterChain(HttpSecurity http) throws Exception { // (4)
+		http
+			.authorizeHttpRequests(authorize -> authorize
+				.anyRequest().authenticated()
+			)
+			.formLogin(withDefaults());
+		return http.build();
+	}
 }
 ```
 
+- 평소와 같이 인증을 구성합니다. Configure Authentication as usual.
+- 먼저 고려해야 할 SecurityFilterChain을 지정하기 위해 `@Order`가 포함된 SecurityFilterChain의 인스턴스를 만듭니다.
+- `http.securityMatcher`는 이 HttpSecurity가 `/api/`로 시작하는 URL에만 적용된다고 명시합니다.
+- `SecurityFilterChain`의 다른 인스턴스를 만듭니다. URL이 `/api/`로 시작하지 않는 경우 이 구성이 사용됩니다. 이 구성은 `apiFilterChain` 이후에 고려됩니다. 1 뒤에 `@Order` 값이 있기 때문입니다(`@Order` 기본값이 마지막이 아님).
+
 ## Security Filters
 
-보안 필터들(Security Filters)은 [SecurityFilterChain](https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-securityfilterchain) API를 사용하여 [FilterChainProxy](https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-filterchainproxy)에 삽입됩니다. 
+보안 필터들(Security Filters)은 [SecurityFilterChain](https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-securityfilterchain) API를 사용하여 [FilterChainProxy](https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-filterchainproxy)에 삽입됩니다.
 
 ### 필터들의 순서
 
