@@ -2,7 +2,7 @@
 
 ### Table of Contents
 
-- [오브젝트(조영호 저)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158391409&orderClick=LAG&Kc=)
+- [오브젝트(조영호 저)](https://github.com/eastshine-high/til/tree/main/books/object)
 
     - [협력, 책임, 역할](https://github.com/eastshine-high/til/blob/main/books/object/collaboration-responsibility-role.md)
 
