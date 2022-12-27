@@ -22,7 +22,7 @@
 
                 - [Resource modeling](https://github.com/eastshine-high/til/blob/main/web/http/rest/api/resource-modeling.md)
 
-                - [HTTP response status code](https://github.com/eastshine-high/til/blob/main/web/http/rest/api/resource-modeling.md)
+                - [HTTP response status code](https://github.com/eastshine-high/til/blob/main/web/http/rest/api/http-response-status-code.md)
 
     - [JWT](https://github.com/eastshine-high/til/blob/main/web/jwt.md)
 
