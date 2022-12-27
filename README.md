@@ -1,84 +1,14 @@
 # Today I Learned (TIL)
 
-## Table of Contents
-
-- [읽은 책 정리](https://github.com/eastshine-high/til/tree/main/books)
-
-- [소프트웨어 테스트](https://github.com/eastshine-high/til/tree/main/software-testing)
-
-- [WEB(HTTP)](https://github.com/eastshine-high/til/tree/main/web)
-
-- [Relational database](https://github.com/eastshine-high/til/tree/main/relational-database)
-
-- [Merdern Java](https://github.com/eastshine-high/til/tree/main/java/modern-java)
-
-- [Classic Java](https://github.com/eastshine-high/til/tree/main/java/below-java8)
-
-- [Java - build](https://github.com/eastshine-high/til/tree/main/java/building)
-
-- [Java - specification(표준)](https://github.com/eastshine-high/til/tree/main/java/specification)
-
-- [Java - Library, Framework](https://github.com/eastshine-high/til/tree/main/java/library-framework)
-
-- [Spring Framework](https://github.com/eastshine-high/til/tree/main/spring/spring-framework)
-
-- [Spring Data](https://github.com/eastshine-high/til/tree/main/spring/spring-data)
-
-- [Spring Security](https://github.com/eastshine-high/til/tree/main/spring/spring-security)
-
-- [Regular expression(정규 표현식)](https://github.com/eastshine-high/til/tree/main/regular-expressions)
-
-- [C](https://github.com/eastshine-high/til/tree/main/c)
-
-- [CSS](https://github.com/eastshine-high/til/tree/main/css)
-
-- [Docker](https://github.com/eastshine-high/til/tree/main/docker)
-
-- [Nginx](https://github.com/eastshine-high/til/tree/main/nginx)
-
-- [정보 보안](https://github.com/eastshine-high/til/tree/main/information-security)
-
-- [컴퓨터 기초](https://github.com/eastshine-high/til/tree/main/computer-basic)
-
-## 읽은 책 정리
-
-- [오브젝트(조영호 저)](https://github.com/eastshine-high/til/tree/main/books/object)
-
-    - [협력, 책임, 역할](https://github.com/eastshine-high/til/blob/main/books/object/collaboration-responsibility-role.md)
-
-    - [설계 품질](https://github.com/eastshine-high/til/blob/main/books/object/design-quality.md)
-
-    - [다형성](https://github.com/eastshine-high/til/blob/main/books/object/polymorphism.md)
-
-    - [서브클래싱과 서브타이핑](https://github.com/eastshine-high/til/blob/main/books/object/subclassing-subtyping.md)
-
-- [도메인 주도 설계(에릭 에반스 저)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788992939850&orderClick=LAG&Kc=)
-
-    - 도메인의 격리
-
-        - [Layerd Architecture](https://github.com/eastshine-high/til/blob/main/books/domain-driven-design/isolating-the-domain/layered-architecture.md)
-
-    - [도메인 객체의 생명주기](https://github.com/eastshine-high/til/tree/main/books/domain-driven-design/the-life-cycle-of-a-domain-object)
-
-        - [Aggregation](https://github.com/eastshine-high/til/blob/main/books/domain-driven-design/the-life-cycle-of-a-domain-object/aggregation.md)
-
-## 소프트웨어 테스트
-
-- 단위 테스트 전략
-
-    - [Right-BICEP : 무엇을 테스트할 것인가](https://github.com/eastshine-high/til/blob/main/software-testing/unit-test/tactics/what-to-test.md)
-
-    - [CORRECT : 경계 조건 테스트](https://github.com/eastshine-high/til/blob/main/software-testing/unit-test/tactics/boundary-conditions.md)
-
 ## WEB(HTTP)
 
-- [Web](https://github.com/eastshine-high/til/tree/main/web)
+- [Web](https://github.com/eastshine-high/til/tree/main/web#web)
 
     - [HTML](https://github.com/eastshine-high/til/blob/main/web/html.md)
 
-    - [HTTP](https://github.com/eastshine-high/til/tree/main/web/http)
+    - [URI](https://github.com/eastshine-high/til/blob/main/web/http/uri.md)
 
-        - [URI](https://github.com/eastshine-high/til/blob/main/web/http/uri.md)
+    - [HTTP](https://github.com/eastshine-high/til/tree/main/web/http)
 
         - [HTTP message](https://github.com/eastshine-high/til/blob/main/web/http/http-message.md)
 
@@ -90,9 +20,21 @@
 
             - API
 
-                - [리소스 모델링](https://github.com/eastshine-high/til/blob/main/web/http/rest/api/resource-modeling.md)
+                - [Resource modeling](https://github.com/eastshine-high/til/blob/main/web/http/rest/api/resource-modeling.md)
+
+                - [HTTP response status code](https://github.com/eastshine-high/til/blob/main/web/http/rest/api/resource-modeling.md)
 
     - [JWT](https://github.com/eastshine-high/til/blob/main/web/jwt.md)
+
+
+## 소프트웨어 테스트
+
+- 단위 테스트 전략
+
+    - [Right-BICEP : 무엇을 테스트할 것인가](https://github.com/eastshine-high/til/blob/main/software-testing/unit-test/tactics/what-to-test.md)
+
+    - [CORRECT : 경계 조건 테스트](https://github.com/eastshine-high/til/blob/main/software-testing/unit-test/tactics/boundary-conditions.md)
+
 
 ## Relational database
 
@@ -208,8 +150,6 @@
 
     - [동시성 문제(2) - MySQL에서 동시성 문제 해결하기](https://github.com/eastshine-high/til/blob/main/spring/spring-framework/blog/concurrency-Issue-2.md)
 
-    - 동시성 문제(3) - Redis에서 동시성 문제 해결하기(예정)
-
 ## 스프링 데이터
 
 - [Spring Data JPA](https://github.com/eastshine-high/til/tree/main/spring/spring-data/spring-data-jpa)
@@ -249,6 +189,28 @@
 - [하위표현식(Subexpression)](https://github.com/eastshine-high/til/tree/main/regular-expressions/subexpression)
 
     - [역참조(Backreferences)](https://github.com/eastshine-high/til/blob/main/regular-expressions/subexpression/backreferences.md)
+
+## 읽은 책 정리
+
+- [오브젝트(조영호 저)](https://github.com/eastshine-high/til/tree/main/books/object)
+
+    - [협력, 책임, 역할](https://github.com/eastshine-high/til/blob/main/books/object/collaboration-responsibility-role.md)
+
+    - [설계 품질](https://github.com/eastshine-high/til/blob/main/books/object/design-quality.md)
+
+    - [다형성](https://github.com/eastshine-high/til/blob/main/books/object/polymorphism.md)
+
+    - [서브클래싱과 서브타이핑](https://github.com/eastshine-high/til/blob/main/books/object/subclassing-subtyping.md)
+
+- [도메인 주도 설계(에릭 에반스 저)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788992939850&orderClick=LAG&Kc=)
+
+    - 도메인의 격리
+
+        - [Layerd Architecture](https://github.com/eastshine-high/til/blob/main/books/domain-driven-design/isolating-the-domain/layered-architecture.md)
+
+    - [도메인 객체의 생명주기](https://github.com/eastshine-high/til/tree/main/books/domain-driven-design/the-life-cycle-of-a-domain-object)
+
+        - [Aggregation](https://github.com/eastshine-high/til/blob/main/books/domain-driven-design/the-life-cycle-of-a-domain-object/aggregation.md)
 
 ## C
 
