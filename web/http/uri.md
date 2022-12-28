@@ -1,6 +1,6 @@
 # URI(Uniform Resource Identifier)
 
-**"URI는 로케이터(locator), 이름(name) 또는 둘 다 추가로 분류될 수 있숩나다"** - [https://www.ietf.org/rfc/rfc3986.txt](https://www.ietf.org/rfc/rfc3986.txt)(1.1.3. URI, URL, and URN)
+**"URI는 로케이터(locator), 이름(name) 또는 둘 다 추가로 분류될 수 있습니다"** - [https://www.ietf.org/rfc/rfc3986.txt](https://www.ietf.org/rfc/rfc3986.txt)(1.1.3. URI, URL, and URN)
 
 ### URI의 의미
 
