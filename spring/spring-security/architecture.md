@@ -1,4 +1,14 @@
-# Architecture
+**참조**
+
+- [https://docs.spring.io/spring-security/reference/servlet/architecture.html](https://docs.spring.io/spring-security/reference/servlet/architecture.html)
+
+- [https://spring.io/guides/topicals/spring-security-architecture/](https://spring.io/guides/topicals/spring-security-architecture/)
+
+- [https://gitlab.com/jongwons.choi/spring-boot-security-lecture/-/blob/master/part1/Lec-1 스프링시큐리티의큰그림.md](https://gitlab.com/jongwons.choi/spring-boot-security-lecture/-/blob/master/part1/Lec-1%20%EC%8A%A4%ED%94%84%EB%A7%81%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0%EC%9D%98%ED%81%B0%EA%B7%B8%EB%A6%BC.md)
+
+---
+
+# Spring Security Architecture
 
 이번 페이지에서는 서블릿 기반 애플리케이션 안에 있는 Spring Security의 아키텍처에 대해 알아봅니다. Spring Security의 [Authentication(인증)](https://docs.spring.io/spring-security/reference/servlet/authentication/index.html#servlet-authentication), [Authorization(인가)](https://docs.spring.io/spring-security/reference/servlet/authorization/index.html#servlet-authorization), [Protection Against Exploits(악용에 대한 보호)](https://docs.spring.io/spring-security/reference/servlet/exploits/index.html#servlet-exploits)는 이 아키텍처의 이해를 기반으로 합니다.
 
@@ -178,13 +188,3 @@ public class MultiHttpSecurityConfig {
 - *ExcpetionTranslationFilter* : 나 이후에 인증이나 권한 예외가 발생하면 내가 잡아서 처리해 줄께.
 - *FilterSecurityInterceptor* : 여기까지 살아서 왔다면 인증이 있다는 거니, 니가 들어가려고 하는 request 에 들어갈 자격이 있는지 그리고 리턴한 결과를 너에게 보내줘도 되는건지 마지막으로 내가 점검해 줄께.
 - 그 밖에... OAuth2 나 Saml2, Cas, X509 등에 관한 필터들도 있다.
-
----
-
-**참조**
-
-[https://docs.spring.io/spring-security/reference/servlet/architecture.html](https://docs.spring.io/spring-security/reference/servlet/architecture.html)
-
-[https://spring.io/guides/topicals/spring-security-architecture/](https://spring.io/guides/topicals/spring-security-architecture/)
-
-[https://gitlab.com/jongwons.choi/spring-boot-security-lecture/-/blob/master/part1/Lec-1 스프링시큐리티의큰그림.md](https://gitlab.com/jongwons.choi/spring-boot-security-lecture/-/blob/master/part1/Lec-1%20%EC%8A%A4%ED%94%84%EB%A7%81%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0%EC%9D%98%ED%81%B0%EA%B7%B8%EB%A6%BC.md)
