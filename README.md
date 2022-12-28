@@ -24,7 +24,9 @@
 
                 - [HTTP response status code](https://github.com/eastshine-high/til/blob/main/web/http/rest/api/http-response-status-code.md)
 
-    - [JWT](https://github.com/eastshine-high/til/blob/main/web/jwt.md)
+    - ETC
+
+        - [JWT](https://github.com/eastshine-high/til/blob/main/web/jwt.md)
 
 
 ## 소프트웨어 테스트
@@ -168,7 +170,7 @@
 
 - [구조(Architecture)](https://github.com/eastshine-high/til/blob/main/spring/spring-security/architecture.md)
 
-- [인증(Authentication)](https://github.com/eastshine-high/til/tree/main/spring/spring-security/authentication)
+- [인증 구조(Authentication architecture)](https://github.com/eastshine-high/til/blob/main/spring/spring-security/authentication/servlet-authentication-architecture.md)
 
 ## 정규표현식
 

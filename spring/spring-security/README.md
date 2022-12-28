@@ -6,6 +6,8 @@
 
 - [인증(Authentication)](https://github.com/eastshine-high/til/tree/main/spring/spring-security/authentication)
 
+    - [인증 구조(Authentication architecture)](https://github.com/eastshine-high/til/blob/main/spring/spring-security/authentication/servlet-authentication-architecture.md)
+
 --- 
 
 Spring Security는 인증(authentication), 인가(authorization) 및 일반적인 공격에 대한 보호를 제공하는 프레임워크입니다. 서블릿(imperative) 애플리케이션과 반응형(reactive) 애플리케이션 모두를 보호하기 위한 최고 수준의 지원을 제공하며, Spring 기반 애플리케이션을 보호하기 위한 사실상의 표준입니다.
