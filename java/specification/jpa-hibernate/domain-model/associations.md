@@ -18,7 +18,7 @@
 
 ## `@ManyToOne`
 
-`@ManyToOne`은 가장 일반적인 연관(Association)이다. 관계형 데이터베이스(e.g. 외래키)에도 직접 상응(equivalent)하며, **자식 엔터티와 부모 엔티티 간의 관계를 설정**합니다.
+`@ManyToOne`은 가장 일반적인 연관(Association)입니다. 관계형 데이터베이스(e.g. 외래키)에도 직접 상응(equivalent)하며, **자식 엔터티와 부모 엔티티 간의 관계를 설정**합니다.
 
 ```java
 @Entity(name = "Person")
@@ -329,6 +329,22 @@ FOREIGN KEY (person_id) REFERENCES Person
 - 전통적인 데이터베이스 개발자 선호.
 - 장점: 부모 테이블과 자식 테이블을 일대일에서 일대다 관계로 변경할 때 테이블 구조 유지할 수 있습니다.
 - 단점: 프록시 기능의 한계로 지연 로딩으로 설정해도 항상 즉시 로딩됩니다.
+
+## `@ManyToMany`
+
+관계형 데이터베이스는 정규화된 테이블 2개로 다대다(ManyToMany) 관계를 표현할 수 없습니다. 따라서 연결 테이블을 추가해서 일대다, 다대일 관계로 풀어내야합니다.
+
+![http://dl.dropbox.com/s/4j4647swnaf53rt/many-to-many-relation.png](http://dl.dropbox.com/s/4j4647swnaf53rt/many-to-many-relation.png)
+
+객체는 컬렉션을 사용하여 객체 2개의 다대다(ManyToMany) 연관 관계가 가능합니다(단방향, 양방향 연관 관계 모두 가능). 물론 관계형 데이터베이스에서는 이 연관 관계를 아래와 같이 연결 테이블을 추가하여 표현합니다.
+
+![http://dl.dropbox.com/s/p52a21br30ykuoh/many-to-many-object.png](http://dl.dropbox.com/s/p52a21br30ykuoh/many-to-many-object.png)
+
+편리해 보이지만 실무에서는 잘 사용하지 않습니다. 왜냐하면 연결 테이블이 단순히 연결만 하고 끝나지 않기 때문입니다. 예를 들어 주문시간, 수량과 같은 데이터가 추가로 들어올 수 있습니다.
+
+![http://dl.dropbox.com/s/owsti771ulhnddj/many-to-many-solution.png](http://dl.dropbox.com/s/owsti771ulhnddj/many-to-many-solution.png)
+
+따라서 `@manyToMany` 를 바로 사용하지 않고 `@OneToMany` 와 `@ManyToOne` 을 활용하여 풀어서 사용합니다.
 
 ---
 
