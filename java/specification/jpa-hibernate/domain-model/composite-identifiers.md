@@ -3,9 +3,9 @@
 복합 식별자들은 하나 이상의 영속 속성들(attributes)에 대응(correspond)합니다. 다음은 JPA 표준에 정의된 복합 식별자를 관리(governing)하는 **규칙**입니다.
 
 - 복합 식별자는 ‘기본 키 클래스’로 표현되어야 합니다. 기본 키 클래스는 `javax.persistence.EmbeddedId` 어노테이션을 사용하여 정의하거나, `javax.persistence.IdClass` 어노테이션을 사용하여 정의할 수 있습니다.
-- 기본 키 클래스는 `public`이어야 하며 기본 생성자가 있어야 한다.
-- 기본 키 클래스는 `Serializable` 인터페이스를 반드시 구현해야 한다.
-- 기본 키 클래스는 `equals`, `hashCode` 메소드를 구현해야 한다.
+- 기본 키 클래스는 `public`이어야 하며 기본 생성자가 있어야 합니다.
+- 기본 키 클래스는 `Serializable` 인터페이스를 반드시 구현해야 합니다.
+- 기본 키 클래스는 `equals`, `hashCode` 메소드를 구현해야 합니다.
 
 > 복합 식별자들은 ‘기본 키 클래스’(예: `@EmbeddedId` 또는 `@IdClass`)로 표현되어야 하는 제한은 JPA에만 해당됩니다. **Hibernate는 다중 `@Id` 속성을 통해 "기본 키 클래스" 없이 복합 식별자를 정의할 수 있습니다.**
 > 
