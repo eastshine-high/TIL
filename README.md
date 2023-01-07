@@ -28,16 +28,6 @@
 
         - [JWT](https://github.com/eastshine-high/til/blob/main/web/jwt.md)
 
-
-## 소프트웨어 테스트
-
-- 단위 테스트 전략
-
-    - [Right-BICEP : 무엇을 테스트할 것인가](https://github.com/eastshine-high/til/blob/main/software-testing/unit-test/tactics/what-to-test.md)
-
-    - [CORRECT : 경계 조건 테스트](https://github.com/eastshine-high/til/blob/main/software-testing/unit-test/tactics/boundary-conditions.md)
-
-
 ## Relational database
 
 - 데이터 베이스 접근
@@ -49,6 +39,14 @@
     - [락](https://github.com/eastshine-high/til/blob/main/relational-database/transaction-lock/lock.md)
 
     - [트랜잭션](https://github.com/eastshine-high/til/blob/main/relational-database/transaction-lock/transaction.md)
+
+## 소프트웨어 테스트
+
+- 단위 테스트 전략
+
+    - [Right-BICEP : 무엇을 테스트할 것인가](https://github.com/eastshine-high/til/blob/main/software-testing/unit-test/tactics/what-to-test.md)
+
+    - [CORRECT : 경계 조건 테스트](https://github.com/eastshine-high/til/blob/main/software-testing/unit-test/tactics/boundary-conditions.md)
 
 ## Java - Specification
 
