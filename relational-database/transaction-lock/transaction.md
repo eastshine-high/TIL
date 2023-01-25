@@ -27,6 +27,32 @@
 
 예시) 어떤 계좌에서 인출 가능한 금액을 조회한 뒤에 인출 가능한 금액을 출금하려는 사이에, 다른 트랜잭션이 먼저 이 계좌에서 출금을 했을 경우.
 
+```SQL
+-- (TX1)
+SELECT 잔고 into :balance
+FROM 계좌
+WHERE 계좌번호 = 123;
+
+-- (TX2)
+UPDATE 계좌
+SET 잔고 = 잔고 - 50000
+WHERE 계좌번호 = 123
+
+COMMIT;
+
+-- (TX1)
+UPDATE 계좌
+SET 잔고 = 잔고 - 10000
+WHERE 계좌번호 = 123
+AND 잔고 >=10000;
+
+If sql%rowcount = 0 THEN
+	alert('잔고가 부족합니다');
+END IF;
+
+COMMIT;
+```
+
 **Phantom Read**
 
 한 트랜잭션 내에서 같은 쿼리를 두 번 수행했는데, 첫 번째 쿼리에서 없던 유령(Phantom) 레코드가 두 번째 쿼리에서 나타나는 현상을 말한다.
@@ -94,6 +120,13 @@ ANSI/ISO SQL 표준(SQL92)에서 정의한 4가지 트랜잭션 격리성 수준
 set transaction isolation level read serializable;
 ```
 
-## 참조
+### 주의사항
+
+트랜잭션 또한 DBMS의 커넥션과 동일하게 꼭 필요한 최소의 코드에만 적용하는 것이 좋다. 이는 프로그램 코드에서 트랜잭션의 범위를 최소화하라는 의미다. 예)
+[트랜잭션 격리 수준과 잠금](https://github.com/eastshine-high/til/blob/main/relational-database/my-sql/innodb-lock.md#%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80%EA%B3%BC-%EC%9E%A0%EA%B8%88)
+
+---
+
+**참조**
 
 <한국데이터진흥원, SQL 전문가 가이드>
