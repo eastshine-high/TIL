@@ -44,6 +44,8 @@
 
     - [Clustering index](https://github.com/eastshine-high/til/blob/main/relational-database/my-sql/clustering-index.md)
 
+    - [InnoDB 스토리지 엔진의 잠금](https://github.com/eastshine-high/til/blob/main/relational-database/my-sql/innodb-lock.md)
+
 ## 소프트웨어 테스트
 
 - 단위 테스트 전략
@@ -51,6 +53,18 @@
     - [Right-BICEP : 무엇을 테스트할 것인가](https://github.com/eastshine-high/til/blob/main/software-testing/unit-test/tactics/what-to-test.md)
 
     - [CORRECT : 경계 조건 테스트](https://github.com/eastshine-high/til/blob/main/software-testing/unit-test/tactics/boundary-conditions.md)
+
+## JavaScript
+
+- Modern
+
+    - [Nullish coalescing operator](https://github.com/eastshine-high/til/blob/main/javascript/modern/nullish-coalescing-operator.md)
+
+    - [Optional chaining](https://github.com/eastshine-high/til/blob/main/javascript/modern/optional-chaining.md)
+
+    - [Destructuring](https://github.com/eastshine-high/til/blob/main/javascript/modern/destructuring.md)
+
+    - [Spread operator](https://github.com/eastshine-high/til/blob/main/javascript/modern/spread-operator.md)
 
 ## Java - Specification
 
